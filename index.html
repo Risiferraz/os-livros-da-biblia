@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Bíblia</title>
+    <link rel="stylesheet" type="text/css" href="/styles/style.css" />
+</head>
+
+<body>
+    <!-- X-X-X-X-X-X-X-X PÁGINA 1 -X-X-X-X-X-X-X-X-X -->
+    <div id="pagina1">
+        <div id="Q1">
+            <img id="img1" src="\imagens\biblia.png">
+        </div>
+        <div id="Q2">
+            <div class="tooltip">
+                <img id="img2" src="\imagens\velho-testamento1.png">
+                <span class="tooltip2">
+                    <img id="img2b" src="\imagens\velho-testamento2.png">
+                </span>
+            </div>
+            <div class="tooltip">
+                <img id="img3" src="\imagens\novo-testamento1.png">
+                <span class="tooltip3">
+                    <img id="img3b" src="\imagens\novo-testamento2.png">
+                </span>
+            </div>
+            <div class="tooltip">
+                <img id="img4" src="\imagens\apocrifos1.png">
+                <span class="tooltip4">
+                    <img id="img4b" src="\imagens\apocrifos2.png">
+                </span>
+            </div>
+        </div>
+        <button id="start" onclick="clicar()">START</button>
+    </div>
+    <!-- X-X-X-X-X-X-X-X PÁGINA 2 -X-X-X-X-X-X-X-X-X -->
+    <div id="pagina2">
+        <div id="obs2">
+            A figura abaixo representa um dos livros da Bíblia.<br>
+            Clique e leia o versículo nele contido.
+        </div>
+        <div id="Marcatempo">
+            <h5>TEMPO:</h5>
+            <h2 id="cronometro">00:00</h2>
+        </div>
+        <div class="livros-da-biblia">
+            <p id="nome-livro" style="display: none;"></p>
+            <img id="livro" src="/imagens/livrofechado.jpg">
+            <!-- X-X-X-X-X-X- MÉTODO DESCARTADO -X-X-X-X-X-X -->
+            <!-- <img class=livroaberto id="genesis" src="/versiculos/genesis.jpg">
+            <img class=livroaberto id="exodo" src="/versiculos/exodo.jpg">
+            <img class=livroaberto id="levitico" src="/versiculos/levitico.jpg">
+            <img class=livroaberto id="numeros" src="/versiculos/numeros.jpg">
+            <img class=livroaberto id="deuteronomio" src="/versiculos/deuteronomio.jpg">
+            <img class=livroaberto id="josue" src="/versiculos/josue.jpg">
+            <img class=livroaberto id="juizes" src="/versiculos/juizes.jpg">
+            <img class=livroaberto id="rute" src="/versiculos/rute.jpg">
+            <img class=livroaberto id="1samuel" src="/versiculos/1samuel.jpg">
+            <img class=livroaberto id="2samuel" src="/versiculos/2samuel.jpg">
+            <img class=livroaberto id="1reis" src="/versiculos/1reis.jpg">
+            <img class=livroaberto id="2reis" src="/versiculos/2reis.jpg">
+            <img class=livroaberto id="1cronicas" src="/versiculos/1cronicas.jpg">
+            <img class=livroaberto id="2cronicas" src="/versiculos/2cronicas.jpg">
+            <img class=livroaberto id="esdras" src="/versiculos/esdras.jpg">
+            <img class=livroaberto id="neemias" src="/versiculos/neemias.jpg">
+            <img class=livroaberto id="tobias" src="/versiculos/tobias.jpg">
+            <img class=livroaberto id="judite" src="/versiculos/judite.jpg">
+            <img class=livroaberto id="ester" src="/versiculos/ester.jpg">
+            <img class=livroaberto id="jo" src="/versiculos/jo.jpg">
+            <img class=livroaberto id="salmos" src="/versiculos/salmos.jpg">
+            <img class=livroaberto id="1macabeus" src="/versiculos/1macabeus.jpg">
+            <img class=livroaberto id="2macabeus" src="/versiculos/2macabeus.jpg">
+            <img class=livroaberto id="proverbios" src="/versiculos/proverbios.jpg">
+            <img class=livroaberto id="eclesiastes" src="/versiculos/eclesiastes.jpg">
+            <img class=livroaberto id="cantares" src="/versiculos/cantares.jpg">
+            <img class=livroaberto id="sabedoria" src="/versiculos/sabedoria.jpg">
+            <img class=livroaberto id="eclesiastico" src="/versiculos/eclesiastico.jpg">
+            <img class=livroaberto id="isaias" src="/versiculos/isaias.jpg">
+            <img class=livroaberto id="jeremias" src="/versiculos/jeremias.jpg">
+            <img class=livroaberto id="lamentacoes" src="/versiculos/lamentacoes.jpg">
+            <img class=livroaberto id="baruque" src="/versiculos/baruque.jpg">
+            <img class=livroaberto id="ezequiel" src="/versiculos/ezequiel.jpg">
+            <img class=livroaberto id="daniel" src="/versiculos/daniel.jpg">
+            <img class=livroaberto id="oseias" src="/versiculos/oseias.jpg">
+            <img class=livroaberto id="joel" src="/versiculos/joel.jpg">
+            <img class=livroaberto id="amos" src="/versiculos/amos.jpg">
+            <img class=livroaberto id="obadias" src="/versiculos/obadias.jpg">
+            <img class=livroaberto id="jonas" src="/versiculos/jonas.jpg">
+            <img class=livroaberto id="miqueias" src="/versiculos/miqueias.jpg">
+            <img class=livroaberto id="naum" src="/versiculos/naum.jpg">
+            <img class=livroaberto id="habacuque" src="/versiculos/habacuque.jpg">
+            <img class=livroaberto id="sofonias" src="/versiculos/sofonias.jpg">
+            <img class=livroaberto id="ageu" src="/versiculos/ageu.jpg">
+            <img class=livroaberto id="zacarias" src="/versiculos/zacarias.jpg">
+            <img class=livroaberto id="malaquias" src="/versiculos/malaquias.jpg">
+            <img class=livroaberto id="mateus" src="/versiculos/mateus.jpg">
+            <img class=livroaberto id="marcos" src="/versiculos/marcos.jpg">
+            <img class=livroaberto id="lucas" src="/versiculos/lucas.jpg">
+            <img class=livroaberto id="joao" src="/versiculos/joao.jpg">
+            <img class=livroaberto id="atos" src="/versiculos/atos.jpg">
+            <img class=livroaberto id="romanos" src="/versiculos/romanos.jpg">
+            <img class=livroaberto id="1corintios" src="/versiculos/1corintios.jpg">
+            <img class=livroaberto id="2corintios" src="/versiculos/2corintios.jpg">
+            <img class=livroaberto id="galatas" src="/versiculos/galatas.jpg">
+            <img class=livroaberto id="efesios" src="/versiculos/efesios.jpg">
+            <img class=livroaberto id="filipenses" src="/versiculos/filipenses.jpg">
+            <img class=livroaberto id="colossenses" src="/versiculos/colossenses.jpg">
+            <img class=livroaberto id="1tessalonicenses" src="/versiculos/1tessalonicenses.jpg">
+            <img class=livroaberto id="2tessalonicenses" src="/versiculos/2tessalonicenses.jpg">
+            <img class=livroaberto id="1timoteo" src="/versiculos/1timoteo.jpg">
+            <img class=livroaberto id="2timoteo" src="/versiculos/2timoteo.jpg">
+            <img class=livroaberto id="tito" src="/versiculos/tito.jpg">
+            <img class=livroaberto id="filemom" src="/versiculos/filemom.jpg">
+            <img class=livroaberto id="hebreus" src="/versiculos/hebreus.jpg">
+            <img class=livroaberto id="tiago" src="/versiculos/tiago.jpg">
+            <img class=livroaberto id="1pedro" src="/versiculos/1pedro.jpg">
+            <img class=livroaberto id="2pedro" src="/versiculos/2pedro.jpg">
+            <img class=livroaberto id="1joao" src="/versiculos/1joao.jpg">
+            <img class=livroaberto id="2joao" src="/versiculos/2joao.jpg">
+            <img class=livroaberto id="3joao" src="/versiculos/3joao.jpg">
+            <img class=livroaberto id="judas" src="/versiculos/judas.jpg">
+            <img class=livroaberto id="apocalipse" src="/versiculos/apocalipse.jpg"> -->
+        </div>
+        <div id="obs3">
+            Você já sabe em que livro da Bíblia está escrito esse versículo?<br>
+            Escreva no espaço abaixo o nome do livro: Se você ainda não sabe,
+            clique em "Dica" e eu vou te dar uma pista!
+        </div>
+        <div id="Marcapontuacao">
+            <h5>PONTOS:</h5>
+            <h2 id="indicador">00</h2>
+        </div>
+        <input type="text" id="nome-do-livro" maxlength="18">
+        <img id="seta1" src="/imagens/icone-seta.png">
+        <div id="despenser-livros">
+            <img class="draggable" draggable="true" id="genesis" src="/livros/gn.png">
+            <img class="draggable" draggable="true" id="exodo" src="/livros/ex.png">
+            <img class="draggable" draggable="true" id="levitico" src="/livros/lv.png">
+            <img class="draggable" draggable="true" id="numeros" src="/livros/nm.png">
+            <img class="draggable" draggable="true" id="deuteronomio" src="/livros/dt.png">
+            <img class="draggable" draggable="true" id="josue" src="/livros/js.png">
+            <img class="draggable" draggable="true" id="juizes" src="/livros/jz.png">
+            <img class="draggable" draggable="true" id="rute" src="/livros/rt.png">
+            <img class="draggable" draggable="true" id="1samuel" src="/livros/1sm.png">
+            <img class="draggable" draggable="true" id="2samuel" src="/livros/2sm.png">
+            <img class="draggable" draggable="true" id="1reis" src="/livros/1rs.png">
+            <img class="draggable" draggable="true" id="2reis" src="/livros/2rs.png">
+            <img class="draggable" draggable="true" id="1cronicas" src="/livros/1cr.png">
+            <img class="draggable" draggable="true" id="2cronicas" src="/livros/2cr.png">
+            <img class="draggable" draggable="true" id="esdras" src="/livros/ed.png">
+            <img class="draggable" draggable="true" id="neemias" src="/livros/ne.png">
+            <img class="draggable" draggable="true" id="tobias" src="/livros/tobias.png">
+            <img class="draggable" draggable="true" id="judite" src="/livros/judite.png">
+            <img class="draggable" draggable="true" id="ester" src="/livros/et.png">
+            <img class="draggable" draggable="true" id="jo" src="/livros/jo.png">
+            <img class="draggable" draggable="true" id="salmos" src="/livros/sl.png">
+            <img class="draggable" draggable="true" id="1macabeus" src="/livros/1macabeus.png">
+            <img class="draggable" draggable="true" id="2macabeus" src="/livros/2macabeus.png">
+            <img class="draggable" draggable="true" id="proverbios" src="/livros/pv.png">
+            <img class="draggable" draggable="true" id="eclesiastes" src="/livros/ec.png">
+            <img class="draggable" draggable="true" id="cantares" src="/livros/ct.png">
+            <img class="draggable" draggable="true" id="sabedoria" src="/livros/sabedoria.png">
+            <img class="draggable" draggable="true" id="eclesiastico" src="/livros/eclesiastico.png">
+            <img class="draggable" draggable="true" id="isaias" src="/livros/is.png">
+            <img class="draggable" draggable="true" id="jeremias" src="/livros/jr.png">
+            <img class="draggable" draggable="true" id="lamentacoes" src="/livros/lm.png">
+            <img class="draggable" draggable="true" id="baruque" src="/livros/baruque.png">
+            <img class="draggable" draggable="true" id="ezequiel" src="/livros/ez.png">
+            <img class="draggable" draggable="true" id="daniel" src="/livros/dn.png">
+            <img class="draggable" draggable="true" id="oseias" src="/livros/os.png">
+            <img class="draggable" draggable="true" id="joel" src="/livros/jl.png">
+            <img class="draggable" draggable="true" id="amos" src="/livros/am.png">
+            <img class="draggable" draggable="true" id="obadias" src="/livros/ob.png">
+            <img class="draggable" draggable="true" id="jonas" src="/livros/jn.png">
+            <img class="draggable" draggable="true" id="miqueias" src="/livros/mq.png">
+            <img class="draggable" draggable="true" id="naum" src="/livros/na.png">
+            <img class="draggable" draggable="true" id="habacuque" src="/livros/hc.png">
+            <img class="draggable" draggable="true" id="sofonias" src="/livros/sf.png">
+            <img class="draggable" draggable="true" id="ageu" src="/livros/ag.png">
+            <img class="draggable" draggable="true" id="zacarias" src="/livros/zc.png">
+            <img class="draggable" draggable="true" id="malaquias" src="/livros/ml.png">
+            <img class="draggable" draggable="true" id="mateus" src="/livros/mt.png">
+            <img class="draggable" draggable="true" id="marcos" src="/livros/mc.png">
+            <img class="draggable" draggable="true" id="lucas" src="/livros/lc.png">
+            <img class="draggable" draggable="true" id="joao" src="/livros/joao.png">
+            <img class="draggable" draggable="true" id="atos" src="/livros/at.png">
+            <img class="draggable" draggable="true" id="romanos" src="/livros/rm.png">
+            <img class="draggable" draggable="true" id="1corintios" src="/livros/1co.png">
+            <img class="draggable" draggable="true" id="2corintios" src="/livros/2co.png">
+            <img class="draggable" draggable="true" id="galatas" src="/livros/gl.png">
+            <img class="draggable" draggable="true" id="efesios" src="/livros/ef.png">
+            <img class="draggable" draggable="true" id="colossenses" src="/livros/cl.png">
+            <img class="draggable" draggable="true" id="filipenses" src="/livros/fl.png">
+            <img class="draggable" draggable="true" id="1tessalonicenses" src="/livros/1ts.png">
+            <img class="draggable" draggable="true" id="2tessalonicenses" src="/livros/2ts.png">
+            <img class="draggable" draggable="true" id="1timoteo" src="/livros/1tm.png">
+            <img class="draggable" draggable="true" id="2timoteo" src="/livros/2tm.png">
+            <img class="draggable" draggable="true" id="tito" src="/livros/tt.png">
+            <img class="draggable" draggable="true" id="filemom" src="/livros/fl.png">
+            <img class="draggable" draggable="true" id="hebreus" src="/livros/hb.png">
+            <img class="draggable" draggable="true" id="tiago" src="/livros/tg.png">
+            <img class="draggable" draggable="true" id="1pedro" src="/livros/1pd.png">
+            <img class="draggable" draggable="true" id="2pedro" src="/livros/2pd.png">
+            <img class="draggable" draggable="true" id="1joao" src="/livros/1jo.png">
+            <img class="draggable" draggable="true" id="2joao" src="/livros/2jo.png">
+            <img class="draggable" draggable="true" id="3joao" src="/livros/3jo.png">
+            <img class="draggable" draggable="true" id="judas" src="/livros/jd.png">
+            <img class="draggable" draggable="true" id="apocalipse" src="/livros/ap.png">
+        </div>
+        <button id="botao-despenser-dicas"></button>
+        <img id="seta2" src="/imagens/icone-seta.png">
+        <div id="container-dicas">
+            <img class="dica" id="genesis" src="/dicas/genesis.png">
+            <img class="dica" id="exodo" src="/dicas/exodo.png">
+            <img class="dica" id="levitico" src="/dicas/levitico.png">
+            <img class="dica" id="numeros" src="/dicas/numeros.png">
+            <img class="dica" id="deuteronomio" src="/dicas/deuteronomio.png">
+            <img class="dica" id="josue" src="/dicas/josue.png">
+            <img class="dica" id="juizes" src="/dicas/juizes.png">
+            <img class="dica" id="rute" src="/dicas/rute.png">
+            <img class="dica" id="1samuel" src="/dicas/1samuel.png">
+            <img class="dica" id="2samuel" src="/dicas/2samuel.png">
+            <img class="dica" id="1reis" src="/dicas/1reis.png">
+            <img class="dica" id="2reis" src="/dicas/2reis.png">
+            <img class="dica" id="1cronicas" src="/dicas/1cronicas.png">
+            <img class="dica" id="2cronicas" src="/dicas/2cronicas.png">
+            <img class="dica" id="esdras" src="/dicas/esdras.png">
+            <img class="dica" id="neemias" src="/dicas/neemias.png">
+            <img class="dica" id="tobias" src="/dicas/tobias.png">
+            <img class="dica" id="judite" src="/dicas/judite.png">
+            <img class="dica" id="ester" src="/dicas/ester.png">
+            <img class="dica" id="jo" src="/dicas/jo.png">
+            <img class="dica" id="salmos" src="/dicas/salmos.png">
+            <img class="dica" id="1macabeus" src="/dicas/1macabeus.png">
+            <img class="dica" id="2macabeus" src="/dicas/2macabeus.png">
+            <img class="dica" id="proverbios" src="/dicas/proverbios.png">
+            <img class="dica" id="eclesiastes" src="/dicas/eclesiastes.png">
+            <img class="dica" id="cantares" src="/dicas/cantares.png">
+            <img class="dica" id="sabedoria" src="/dicas/sabedoria.png">
+            <img class="dica" id="eclesiastico" src="/dicas/eclesiastico.png">
+            <img class="dica" id="isaias" src="/dicas/isaias.png">
+            <img class="dica" id="jeremias" src="/dicas/jeremias.png">
+            <img class="dica" id="lamentacoes" src="/dicas/lamentacoes.png">
+            <img class="dica" id="baruque" src="/dicas/baruque.png">
+            <img class="dica" id="ezequiel" src="/dicas/ezequiel.png">
+            <img class="dica" id="daniel" src="/dicas/daniel.png">
+            <img class="dica" id="oseias" src="/dicas/oseias.png">
+            <img class="dica" id="joel" src="/dicas/joel.png">
+            <img class="dica" id="amos" src="/dicas/amos.png">
+            <img class="dica" id="obadias" src="/dicas/obadias.png">
+            <img class="dica" id="jonas" src="/dicas/jonas.png">
+            <img class="dica" id="miqueias" src="/dicas/miqueias.png">
+            <img class="dica" id="naum" src="/dicas/naum.png">
+            <img class="dica" id="habacuque" src="/dicas/habacuque.png">
+            <img class="dica" id="sofonias" src="/dicas/sofonias.png">
+            <img class="dica" id="ageu" src="/dicas/ageu.png">
+            <img class="dica" id="zacarias" src="/dicas/zacarias.png">
+            <img class="dica" id="malaquias" src="/dicas/malaquias.png">
+            <img class="dica" id="mateus" src="/dicas/mateus.png">
+            <img class="dica" id="marcos" src="/dicas/marcos.png">
+            <img class="dica" id="lucas" src="/dicas/lucas.png">
+            <img class="dica" id="joao" src="/dicas/joao.png">
+            <img class="dica" id="atos" src="/dicas/atos.png">
+            <img class="dica" id="romanos" src="/dicas/romanos.png">
+            <img class="dica" id="1corintios" src="/dicas/1corintios.png">
+            <img class="dica" id="2corintios" src="/dicas/2corintios.png">
+            <img class="dica" id="galatas" src="/dicas/galatas.png">
+            <img class="dica" id="efesios" src="/dicas/efesios.png">
+            <img class="dica" id="colossenses" src="/dicas/colossenses.png">
+            <img class="dica" id="filipenses" src="/dicas/filipenses.png">
+            <img class="dica" id="1tessalonicenses" src="/dicas/1tessalonicenses.png">
+            <img class="dica" id="2tessalonicenses" src="/dicas/2tessalonicenses.png">
+            <img class="dica" id="1timoteo" src="/dicas/1timoteo.png">
+            <img class="dica" id="2timoteo" src="/dicas/2timoteo.png">
+            <img class="dica" id="tito" src="/dicas/tito.png">
+            <img class="dica" id="filemom" src="/dicas/filemom.png">
+            <img class="dica" id="hebreus" src="/dicas/hebreus.png">
+            <img class="dica" id="tiago" src="/dicas/tiago.png">
+            <img class="dica" id="1pedro" src="/dicas/1pedro.png">
+            <img class="dica" id="2pedro" src="/dicas/2pedro.png">
+            <img class="dica" id="1joao" src="/dicas/1joao.png">
+            <img class="dica" id="2joao" src="/dicas/2joao.png">
+            <img class="dica" id="3joao" src="/dicas/3joao.png">
+            <img class="dica" id="judas" src="/dicas/judas.png">
+            <img class="dica" id="apocalipse" src="/dicas/apocalipse.png">
+        </div>
+        <div id="obs4">
+            Em que parte da Bíblia fica esse livro? Clique na imagem do livro acima,
+            arraste-a e solte-a na área correspondente (Velho ou Novo Testamento).
+        </div>
+        <div class="caixa-dropped" id="at"></div>
+        <div class="caixa-dropped" id="nt"></div>
+    </div>
+    <script src="scripts/LivroDaBiblia.js" defer></script>
+    <script src="scripts/index.js" defer></script>
+    <script src="scripts/cronometro.js"></script>
+    <script src="scripts/scriptrandom.js"></script>
+</body>
+
+</html>

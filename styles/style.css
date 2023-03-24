@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+/* -----------------------------------------------------------------------------*/
+/*      PÁGINA 1        */
+#pagina1 {
+    width: 600px;
+    height: 900px;
+    background-color: #e0c282;
+    margin: 2% auto;
+}
+#img1 {
+    width: 100%;
+}
+
+#img2 {
+    width: 100%;
+    padding: 2% 10%;
+}
+#img2b {
+    width: 100%;
+}
+.tooltip .tooltip2 {
+    z-index: 2;
+    visibility: hidden;
+    position: absolute;
+    left: 20%;
+    bottom: 5%;
+    padding: 0.5em;
+    width: 580px;
+    background-color: #e0c282;
+}
+.tooltip:hover .tooltip2 {
+    visibility: visible;
+}
+#img3 {
+    width: 100%;
+    padding: 2% 10%;
+}
+#img3b {
+    width: 100%;
+}
+.tooltip .tooltip3 {
+    z-index: 2;
+    visibility: hidden;
+    position: absolute;
+    left: 20%;
+    bottom: 5%;
+    padding: 0.5em;
+    width: 580px;
+    background-color: #e0c282;
+}
+.tooltip:hover .tooltip3 {
+    visibility: visible;
+}
+#img4 {
+    width: 100%;
+    padding: 2% 10%;
+}
+#img4b {
+    width: 100%;
+}
+.tooltip .tooltip4 {
+    z-index: 2;
+    visibility: hidden;
+    position: absolute;
+    left: 20%;
+    bottom: 5%;
+    padding: 0.5em;
+    width: 580px;
+    background-color: #e0c282;
+}
+.tooltip:hover .tooltip4 {
+    visibility: visible;
+}
+
+#start {
+    background: rgb(182, 114, 13);
+    width: 200px;
+    height: 70px;
+    font-size: 40px;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    border-radius: 8px;
+    border: outset 5px rgb(252, 237, 177);
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: 35px;
+}
+/* -----------------------------------------------------------------------------*/
+/*      PÁGINA 2        */
+#pagina2 {
+    width: 600px;
+    height: auto;
+    background-color: #e0c282;
+    margin: 2% auto;
+    padding-bottom: 2%;
+    display: none;
+    position: relative;
+    grid-template-columns: 25% 25% 33% 17%;
+    grid-template-rows: auto 320px auto auto 140px auto 300px;
+}
+#obs2{
+    padding: 1% 4%;
+    font-family: "Palatino Linotype";
+    color: rgb(18, 18, 18);
+    font-style: oblique;
+    font-size: 18px;
+    line-height: 1.3rem;
+    text-align: justify;
+    margin-top: auto;
+    margin-bottom: auto;
+    grid-area: 1 / 1 / span 1 / span 3;
+}
+#Marcatempo {
+    grid-area: 1 / 4 / span 1 / span 1;
+    background-color: rgb(182, 114, 13);
+    margin: 5% 20% 5% 0;
+    padding: 4%;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: solid 4px black;
+}
+h5 {
+    font-family: "Palatino Linotype";
+    color: rgb(18, 18, 18);
+    font-size: 10px;
+}
+h2 {
+    font-family: Impact, Arial;
+    color: rgb(18, 18, 18);
+    font-size: 25px;
+    padding-top: 6px;
+}
+.livros-da-biblia {
+    grid-area: 2 / 1 / span 1 / span 4;
+    position: static;/*o "elemento pai", no caso "livros-da-biblia" precisa está com position: static para que o position: absolute do "elemento filho, no caso "livroaberto" funcione*/
+    margin: 0 auto;
+    width: 480px;
+    height: 312px;
+    border: solid 1px #30250b;
+    box-shadow: rgba(0, 0, 0, 0.8) 5px 5px;
+}
+#livro {
+    width: 480px;
+    position: absolute;
+    z-index: 2;
+}
+.livroaberto {
+    width: 480px;
+    position: absolute;/*o "elemento pai", no caso "livros-da-biblia" e também o "elemento irmão" que vem antes, (no caso "livro fechado") precisam está com position: static para que funcione*/
+}
+#obs3 {
+    grid-area: 3 / 1 / span 1 / span 3;
+    font-family: "Palatino Linotype";
+    color: rgb(18, 18, 18);
+    font-style: oblique;
+    font-size: 18px;
+    line-height: 1.3rem;
+    padding: 2% 4%;
+}
+#Marcapontuacao {
+    grid-area: 3 / 4 / span 1 / span 1;
+    background-color: rgb(182, 114, 13);
+    box-sizing: border-box;
+    margin: 5% 20% 5% 0;
+    padding: 4%;
+    text-align: center;
+    border-radius: 8px;
+    border: solid 4px black;
+}
+#nome-do-livro {
+    grid-area: 4 / 1 / span 1 / span 2;
+    background-image: url("/imagens/input.jpg");
+    background-size: cover;
+    font: normal 16pt Impact, Arial;
+    color:rgb(18, 18, 18);
+    width: 200px;
+    height: 55px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; /* para deixar p texto horizontalmente centralizado*/
+    padding-top: 15px;
+    border: solid 4px rgb(18, 18, 18);
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    box-shadow: 1px 1px 2px #333333;    
+    -moz-box-shadow: 1px 1px 2px #333333;
+    -webkit-box-shadow: 1px 1px 2px #333333;
+    text-transform: uppercase;/*para deixar o texto sempre em maiúsculo*/
+}
+#seta1 {
+    grid-area: 4 / 3 / span 1 / span 1;
+    width: 50px;
+    height: 50px;
+    margin-left: -15%;
+}
+#despenser-livros {
+    grid-area: 4 / 3 / span 1 / span 2;
+    border: solid 1px #30250b;
+    box-shadow: rgba(0, 0, 0, 0.8) 5px 5px;
+    width: 160px;
+    height: 55px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.draggable{
+    width: 55px;
+    height: 160px;
+    position: absolute;
+    transform: rotate(90deg);
+    display: none;
+
+}
+.draggable:hover{/*droppable-hover = tranformação da cx de receber elemento quando o mouse passa por ela*/
+    border-width: 2px;
+    transform: scale(1.3);
+    cursor: move;/*muda o tipo do cursor - neste caso para mover o elemento*/   
+}
+#botao-despenser-dicas {
+    grid-area: 5 / 1 / span 1 / span 2;
+    background-image: url("/imagens/dica.png");
+    background-size: contain;
+    background-color: #e0c282;
+    width: 150px;
+    height: 90px;
+    margin: auto;
+}
+#seta2 {
+    grid-area: 5 / 3 / span 1 / span 1;
+    width: 50px;
+    height: 50px;
+    margin-left: -15%;
+    margin-top: 21%;
+}
+#container-dicas {
+    grid-area: 5 / 3 / span 1 / span 2;
+    position: relative;
+    border: solid 1px #30250b;
+    box-shadow: rgba(0, 0, 0, 0.8) 5px 5px;
+    width: 100px;
+    height: 50px;
+    width: 200px;
+    height: 120px;
+    margin: auto;
+
+}
+.dica {
+    position: absolute;
+    display: none;
+    width: 100%;
+}
+#obs4 {
+    grid-area: 6 / 1 / span 1 / span 4;
+    font-family: "Palatino Linotype";
+    color: rgb(18, 18, 18);
+    font-style: oblique;
+    font-size: 18px;
+    line-height: 1.3rem;
+    padding: 1% 4%;
+}
+.caixa-dropped {
+    display:flex;
+    /* justify-content: center; */
+    border: solid 1px #30250b;
+    box-shadow: rgba(0, 0, 0, 0.8) 5px 5px;
+    margin: 5%;
+}
+#at {
+    grid-area: 7 / 1 / span 1 / span 2;
+    background-image: url("/imagens/velho-testamento.png");
+    background-size: cover;
+    left: 0;
+}
+#nt {
+    grid-area: 7 / 3 / span 1 / span 2;
+    background-image: url("/imagens/novo-testamento.png");
+    background-size: cover;
+    right: 0;
+}
