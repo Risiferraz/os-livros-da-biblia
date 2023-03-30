@@ -257,9 +257,8 @@ h2 {
 
 }
 .dica {
-    position: absolute;
-    display: none;
     width: 100%;
+    display: none;
 }
 #obs4 {
     grid-area: 6 / 1 / span 1 / span 4;
