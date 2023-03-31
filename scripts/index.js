@@ -90,6 +90,11 @@ livro.addEventListener("click",()=>{
 sorteiaLivroDaVez()
 })
 
+document.getElementById("botao-despenser-dicas")
+.addEventListener("click",()=>{
+document.getElementById("dica").style.display="block"
+})
+
 const cronometro = new Cronometro()
 setInterval(() => {
   cronometro.atualizaCronometro()
