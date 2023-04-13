@@ -103,7 +103,7 @@
     display: none;
     position: relative;
     grid-template-columns: 25% 25% 33% 17%;
-    grid-template-rows: auto 320px auto auto 140px auto 300px;
+    grid-template-rows: auto 320px auto auto 70px auto 300px;
 }
 #obs2{
     padding: 1% 4%;
@@ -176,15 +176,14 @@ h2 {
     border: solid 4px black;
 }
 #nome-do-livro {
-    grid-area: 4 / 1 / span 1 / span 2;
+    grid-area: 5 / 1 / span 1 / span 2;
     background-image: url("/imagens/input.jpg");
     background-size: cover;
     font: normal 16pt Impact, Arial;
     color:rgb(18, 18, 18);
     width: 200px;
     height: 55px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 4% auto;
     text-align: center; /* para deixar p texto horizontalmente centralizado*/
     padding-top: 15px;
     border: solid 4px rgb(18, 18, 18);
@@ -197,19 +196,18 @@ h2 {
     text-transform: uppercase;/*para deixar o texto sempre em maiúsculo*/
 }
 #seta1 {
-    grid-area: 4 / 3 / span 1 / span 1;
+    grid-area: 5 / 3 / span 1 / span 1;
     width: 50px;
     height: 50px;
-    margin-left: -15%;
+    margin: 7% 0 0 -14%;
 }
 #despenser-livros {
-    grid-area: 4 / 3 / span 1 / span 2;
+    grid-area: 5 / 3 / span 1 / span 2;
     border: solid 1px #30250b;
     box-shadow: rgba(0, 0, 0, 0.8) 5px 5px;
     width: 160px;
     height: 55px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 4% auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -221,7 +219,6 @@ h2 {
     position: absolute;
     transform: rotate(90deg);
     display: none;
-
 }
 .draggable:hover{/*droppable-hover = tranformação da cx de receber elemento quando o mouse passa por ela*/
     border-width: 2px;
@@ -229,7 +226,7 @@ h2 {
     cursor: move;/*muda o tipo do cursor - neste caso para mover o elemento*/   
 }
 #botao-despenser-dicas {
-    grid-area: 5 / 1 / span 1 / span 2;
+    grid-area: 4 / 1 / span 1 / span 2;
     background-image: url("/imagens/dica.png");
     background-size: contain;
     background-color: #e0c282;
@@ -238,14 +235,14 @@ h2 {
     margin: auto;
 }
 #seta2 {
-    grid-area: 5 / 3 / span 1 / span 1;
+    grid-area: 4 / 3 / span 1 / span 1;
     width: 50px;
     height: 50px;
     margin-left: -15%;
     margin-top: 21%;
 }
 #container-dicas {
-    grid-area: 5 / 3 / span 1 / span 2;
+    grid-area: 4 / 3 / span 1 / span 2;
     position: relative;
     border: solid 1px #30250b;
     box-shadow: rgba(0, 0, 0, 0.8) 5px 5px;
