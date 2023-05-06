@@ -11,10 +11,10 @@ class LivroDaBiblia {
         livroElementoHTML.src = this.src
         document.getElementById("dica").style.display="none"
         document.getElementById("dica").src = this.dicaSRC
-        document.getElementById(this.id).style.display="block"
+        const imagem = this.criaImagemResposta()
+        document.getElementById('despenser-livros').innerHTML=imagem//gerando um html no javascript dentro do despenser-livros
     }
-    // verificaSeARespostaEstaCerta(){
-    //     document.getElementById(this.id).style.display="block"
-    //      desativa o método mostraLivro (para que não se possa passar adiante)
-    // }
+    criaImagemResposta(){
+        return `<img class="draggable" draggable="true" id="${this.id}" src="${this.respostaSRC}">`
+    }
 }

@@ -129,6 +129,7 @@
             Escreva no espaço abaixo o nome do livro: Se você ainda não sabe,
             clique em "Dica" e eu vou te dar uma pista!
         </div>
+        <button id="botao-passa-a-vez">PASSA A VEZ</button>
         <div id="Marcapontuacao">
             <h5>PONTOS:</h5>
             <h2 id="indicador">00</h2>
@@ -214,80 +215,82 @@
         <input type="text" id="nome-do-livro" maxlength="18">
         <img id="seta1" src="/imagens/icone-seta.png">
         <div id="despenser-livros">
-            <img class="draggable" draggable="true" id="genesis" src="/livros/gn.png">
-            <img class="draggable" draggable="true" id="exodo" src="/livros/ex.png">
-            <img class="draggable" draggable="true" id="levitico" src="/livros/lv.png">
-            <img class="draggable" draggable="true" id="numeros" src="/livros/nm.png">
-            <img class="draggable" draggable="true" id="deuteronomio" src="/livros/dt.png">
-            <img class="draggable" draggable="true" id="josue" src="/livros/js.png">
-            <img class="draggable" draggable="true" id="juizes" src="/livros/jz.png">
-            <img class="draggable" draggable="true" id="rute" src="/livros/rt.png">
-            <img class="draggable" draggable="true" id="1samuel" src="/livros/1sm.png">
-            <img class="draggable" draggable="true" id="2samuel" src="/livros/2sm.png">
-            <img class="draggable" draggable="true" id="1reis" src="/livros/1rs.png">
-            <img class="draggable" draggable="true" id="2reis" src="/livros/2rs.png">
-            <img class="draggable" draggable="true" id="1cronicas" src="/livros/1cr.png">
-            <img class="draggable" draggable="true" id="2cronicas" src="/livros/2cr.png">
-            <img class="draggable" draggable="true" id="esdras" src="/livros/ed.png">
-            <img class="draggable" draggable="true" id="neemias" src="/livros/ne.png">
-            <img class="draggable" draggable="true" id="tobias" src="/livros/tobias.png">
-            <img class="draggable" draggable="true" id="judite" src="/livros/judite.png">
-            <img class="draggable" draggable="true" id="ester" src="/livros/et.png">
-            <img class="draggable" draggable="true" id="jo" src="/livros/jo.png">
-            <img class="draggable" draggable="true" id="salmos" src="/livros/sl.png">
-            <img class="draggable" draggable="true" id="1macabeus" src="/livros/1macabeus.png">
-            <img class="draggable" draggable="true" id="2macabeus" src="/livros/2macabeus.png">
-            <img class="draggable" draggable="true" id="proverbios" src="/livros/pv.png">
-            <img class="draggable" draggable="true" id="eclesiastes" src="/livros/ec.png">
-            <img class="draggable" draggable="true" id="cantares" src="/livros/ct.png">
-            <img class="draggable" draggable="true" id="sabedoria" src="/livros/sabedoria.png">
-            <img class="draggable" draggable="true" id="eclesiastico" src="/livros/eclesiastico.png">
-            <img class="draggable" draggable="true" id="isaias" src="/livros/is.png">
-            <img class="draggable" draggable="true" id="jeremias" src="/livros/jr.png">
-            <img class="draggable" draggable="true" id="lamentacoes" src="/livros/lm.png">
-            <img class="draggable" draggable="true" id="baruque" src="/livros/baruque.png">
-            <img class="draggable" draggable="true" id="ezequiel" src="/livros/ez.png">
-            <img class="draggable" draggable="true" id="daniel" src="/livros/dn.png">
-            <img class="draggable" draggable="true" id="oseias" src="/livros/os.png">
-            <img class="draggable" draggable="true" id="joel" src="/livros/jl.png">
-            <img class="draggable" draggable="true" id="amos" src="/livros/am.png">
-            <img class="draggable" draggable="true" id="obadias" src="/livros/ob.png">
-            <img class="draggable" draggable="true" id="jonas" src="/livros/jn.png">
-            <img class="draggable" draggable="true" id="miqueias" src="/livros/mq.png">
-            <img class="draggable" draggable="true" id="naum" src="/livros/na.png">
-            <img class="draggable" draggable="true" id="habacuque" src="/livros/hc.png">
-            <img class="draggable" draggable="true" id="sofonias" src="/livros/sf.png">
-            <img class="draggable" draggable="true" id="ageu" src="/livros/ag.png">
-            <img class="draggable" draggable="true" id="zacarias" src="/livros/zc.png">
-            <img class="draggable" draggable="true" id="malaquias" src="/livros/ml.png">
-            <img class="draggable" draggable="true" id="mateus" src="/livros/mt.png">
-            <img class="draggable" draggable="true" id="marcos" src="/livros/mc.png">
-            <img class="draggable" draggable="true" id="lucas" src="/livros/lc.png">
-            <img class="draggable" draggable="true" id="joao" src="/livros/joao.png">
-            <img class="draggable" draggable="true" id="atos" src="/livros/at.png">
-            <img class="draggable" draggable="true" id="romanos" src="/livros/rm.png">
-            <img class="draggable" draggable="true" id="1corintios" src="/livros/1co.png">
-            <img class="draggable" draggable="true" id="2corintios" src="/livros/2co.png">
-            <img class="draggable" draggable="true" id="galatas" src="/livros/gl.png">
-            <img class="draggable" draggable="true" id="efesios" src="/livros/ef.png">
-            <img class="draggable" draggable="true" id="colossenses" src="/livros/cl.png">
-            <img class="draggable" draggable="true" id="filipenses" src="/livros/fl.png">
-            <img class="draggable" draggable="true" id="1tessalonicenses" src="/livros/1ts.png">
-            <img class="draggable" draggable="true" id="2tessalonicenses" src="/livros/2ts.png">
-            <img class="draggable" draggable="true" id="1timoteo" src="/livros/1tm.png">
-            <img class="draggable" draggable="true" id="2timoteo" src="/livros/2tm.png">
-            <img class="draggable" draggable="true" id="tito" src="/livros/tt.png">
-            <img class="draggable" draggable="true" id="filemom" src="/livros/fl.png">
-            <img class="draggable" draggable="true" id="hebreus" src="/livros/hb.png">
-            <img class="draggable" draggable="true" id="tiago" src="/livros/tg.png">
-            <img class="draggable" draggable="true" id="1pedro" src="/livros/1pd.png">
-            <img class="draggable" draggable="true" id="2pedro" src="/livros/2pd.png">
-            <img class="draggable" draggable="true" id="1joao" src="/livros/1jo.png">
-            <img class="draggable" draggable="true" id="2joao" src="/livros/2jo.png">
-            <img class="draggable" draggable="true" id="3joao" src="/livros/3jo.png">
-            <img class="draggable" draggable="true" id="judas" src="/livros/jd.png">
-            <img class="draggable" draggable="true" id="apocalipse" src="/livros/ap.png">
         </div>
+        <!-- <div id="deposito-oculto">
+        <img class="draggable" draggable="true" id="genesis" src="/livros/gn.png">
+        <img class="draggable" draggable="true" id="exodo" src="/livros/ex.png">
+        <img class="draggable" draggable="true" id="levitico" src="/livros/lv.png">
+        <img class="draggable" draggable="true" id="numeros" src="/livros/nm.png">
+        <img class="draggable" draggable="true" id="deuteronomio" src="/livros/dt.png">
+        <img class="draggable" draggable="true" id="josue" src="/livros/js.png">
+        <img class="draggable" draggable="true" id="juizes" src="/livros/jz.png">
+        <img class="draggable" draggable="true" id="rute" src="/livros/rt.png">
+        <img class="draggable" draggable="true" id="1samuel" src="/livros/1sm.png">
+        <img class="draggable" draggable="true" id="2samuel" src="/livros/2sm.png">
+        <img class="draggable" draggable="true" id="1reis" src="/livros/1rs.png">
+        <img class="draggable" draggable="true" id="2reis" src="/livros/2rs.png">
+        <img class="draggable" draggable="true" id="1cronicas" src="/livros/1cr.png">
+        <img class="draggable" draggable="true" id="2cronicas" src="/livros/2cr.png">
+        <img class="draggable" draggable="true" id="esdras" src="/livros/ed.png">
+        <img class="draggable" draggable="true" id="neemias" src="/livros/ne.png">
+        <img class="draggable" draggable="true" id="tobias" src="/livros/tobias.png">
+        <img class="draggable" draggable="true" id="judite" src="/livros/judite.png">
+        <img class="draggable" draggable="true" id="ester" src="/livros/et.png">
+        <img class="draggable" draggable="true" id="jo" src="/livros/jo.png">
+        <img class="draggable" draggable="true" id="salmos" src="/livros/sl.png">
+        <img class="draggable" draggable="true" id="1macabeus" src="/livros/1macabeus.png">
+        <img class="draggable" draggable="true" id="2macabeus" src="/livros/2macabeus.png">
+        <img class="draggable" draggable="true" id="proverbios" src="/livros/pv.png">
+        <img class="draggable" draggable="true" id="eclesiastes" src="/livros/ec.png">
+        <img class="draggable" draggable="true" id="cantares" src="/livros/ct.png">
+        <img class="draggable" draggable="true" id="sabedoria" src="/livros/sabedoria.png">
+        <img class="draggable" draggable="true" id="eclesiastico" src="/livros/eclesiastico.png">
+        <img class="draggable" draggable="true" id="isaias" src="/livros/is.png">
+        <img class="draggable" draggable="true" id="jeremias" src="/livros/jr.png">
+        <img class="draggable" draggable="true" id="lamentacoes" src="/livros/lm.png">
+        <img class="draggable" draggable="true" id="baruque" src="/livros/baruque.png">
+        <img class="draggable" draggable="true" id="ezequiel" src="/livros/ez.png">
+        <img class="draggable" draggable="true" id="daniel" src="/livros/dn.png">
+        <img class="draggable" draggable="true" id="oseias" src="/livros/os.png">
+        <img class="draggable" draggable="true" id="joel" src="/livros/jl.png">
+        <img class="draggable" draggable="true" id="amos" src="/livros/am.png">
+        <img class="draggable" draggable="true" id="obadias" src="/livros/ob.png">
+        <img class="draggable" draggable="true" id="jonas" src="/livros/jn.png">
+        <img class="draggable" draggable="true" id="miqueias" src="/livros/mq.png">
+        <img class="draggable" draggable="true" id="naum" src="/livros/na.png">
+        <img class="draggable" draggable="true" id="habacuque" src="/livros/hc.png">
+        <img class="draggable" draggable="true" id="sofonias" src="/livros/sf.png">
+        <img class="draggable" draggable="true" id="ageu" src="/livros/ag.png">
+        <img class="draggable" draggable="true" id="zacarias" src="/livros/zc.png">
+        <img class="draggable" draggable="true" id="malaquias" src="/livros/ml.png">
+        <img class="draggable" draggable="true" id="mateus" src="/livros/mt.png">
+        <img class="draggable" draggable="true" id="marcos" src="/livros/mc.png">
+        <img class="draggable" draggable="true" id="lucas" src="/livros/lc.png">
+        <img class="draggable" draggable="true" id="joao" src="/livros/joao.png">
+        <img class="draggable" draggable="true" id="atos" src="/livros/at.png">
+        <img class="draggable" draggable="true" id="romanos" src="/livros/rm.png">
+        <img class="draggable" draggable="true" id="1corintios" src="/livros/1co.png">
+        <img class="draggable" draggable="true" id="2corintios" src="/livros/2co.png">
+        <img class="draggable" draggable="true" id="galatas" src="/livros/gl.png">
+        <img class="draggable" draggable="true" id="efesios" src="/livros/ef.png">
+        <img class="draggable" draggable="true" id="colossenses" src="/livros/cl.png">
+        <img class="draggable" draggable="true" id="filipenses" src="/livros/fl.png">
+        <img class="draggable" draggable="true" id="1tessalonicenses" src="/livros/1ts.png">
+        <img class="draggable" draggable="true" id="2tessalonicenses" src="/livros/2ts.png">
+        <img class="draggable" draggable="true" id="1timoteo" src="/livros/1tm.png">
+        <img class="draggable" draggable="true" id="2timoteo" src="/livros/2tm.png">
+        <img class="draggable" draggable="true" id="tito" src="/livros/tt.png">
+        <img class="draggable" draggable="true" id="filemom" src="/livros/fl.png">
+        <img class="draggable" draggable="true" id="hebreus" src="/livros/hb.png">
+        <img class="draggable" draggable="true" id="tiago" src="/livros/tg.png">
+        <img class="draggable" draggable="true" id="1pedro" src="/livros/1pd.png">
+        <img class="draggable" draggable="true" id="2pedro" src="/livros/2pd.png">
+        <img class="draggable" draggable="true" id="1joao" src="/livros/1jo.png">
+        <img class="draggable" draggable="true" id="2joao" src="/livros/2jo.png">
+        <img class="draggable" draggable="true" id="3joao" src="/livros/3jo.png">
+        <img class="draggable" draggable="true" id="judas" src="/livros/jd.png">
+        <img class="draggable" draggable="true" id="apocalipse" src="/livros/ap.png">
+        </div> -->
         <div id="obs4">
             Em que parte da Bíblia fica esse livro? Clique na imagem do livro acima,
             arraste-a e solte-a na área correspondente (Velho ou Novo Testamento).

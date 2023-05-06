@@ -165,6 +165,11 @@ h2 {
     line-height: 1.3rem;
     padding: 2% 4%;
 }
+#botao-passa-a-vez {
+    position: absolute;
+    right: 19%;
+    top: 43%;
+}
 #Marcapontuacao {
     grid-area: 3 / 4 / span 1 / span 1;
     background-color: rgb(182, 114, 13);
@@ -218,7 +223,6 @@ h2 {
     height: 160px;
     position: absolute;
     transform: rotate(90deg);
-    display: none;
 }
 .draggable:hover{/*droppable-hover = tranformação da cx de receber elemento quando o mouse passa por ela*/
     border-width: 2px;
@@ -284,4 +288,7 @@ h2 {
     background-image: url("/imagens/novo-testamento.png");
     background-size: cover;
     right: 0;
+}
+#deposito-oculto {
+    display: none;
 }
