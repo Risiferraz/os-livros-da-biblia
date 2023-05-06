@@ -13,4 +13,8 @@ class LivroDaBiblia {
         document.getElementById("dica").src = this.dicaSRC
         document.getElementById(this.id).style.display="block"
     }
+    // verificaSeARespostaEstaCerta(){
+    //     document.getElementById(this.id).style.display="block"
+    //      desativa o método mostraLivro (para que não se possa passar adiante)
+    // }
 }

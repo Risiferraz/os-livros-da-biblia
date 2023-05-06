@@ -110,5 +110,12 @@ function sorteiaLivroDaVez() {
     listaDeNumerosAleatoriosJaSorteados.push(numeroAleatorio);
   }
 }
+// let dragged = null;
 
+// document.addEventListener("dragend", event => {
+//   dragged = event.target;
+// });
+// document.addEventListener("dragover", event => {
+//   event.preventDefault();
+// });
 
