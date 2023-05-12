@@ -40,7 +40,8 @@
     <div id="pagina2">
         <div id="obs2">
             A figura abaixo representa um dos livros da Bíblia.<br>
-            Clique e leia o versículo nele contido.
+            Clique e leia o versículo nele contido.<br>
+            Você sabe em que livro da Bíblia está escrito esse versículo?
         </div>
         <div id="Marcatempo">
             <h5>TEMPO:</h5>
@@ -125,11 +126,10 @@
             <img class=livroaberto id="apocalipse" src="/versiculos/apocalipse.jpg"> -->
         </div>
         <div id="obs3">
-            Você já sabe em que livro da Bíblia está escrito esse versículo?<br>
             Escreva no espaço abaixo o nome do livro: Se você ainda não sabe,
-            clique em "Dica" e eu vou te dar uma pista!
+            clique em "Dica" e eu vou te dar uma pista! Se mesmo assim continua
+            difícil, clique no livro acima para passar a vez.
         </div>
-        <button id="botao-passa-a-vez">PASSA A VEZ</button>
         <div id="Marcapontuacao">
             <h5>PONTOS:</h5>
             <h2 id="indicador">00</h2>
@@ -138,6 +138,7 @@
         <img id="seta2" src="/imagens/icone-seta.png">
         <div id="container-dicas">
             <img class="dica" id="dica" src="">
+            <!-- X-X-X-X-X-X- MÉTODO DESCARTADO -X-X-X-X-X-X -->
             <!-- <img class="dica" id="genesis" src="/dicas/genesis.png">
             <img class="dica" id="exodo" src="/dicas/exodo.png">
             <img class="dica" id="levitico" src="/dicas/levitico.png">
@@ -212,7 +213,9 @@
             <img class="dica" id="judas" src="/dicas/judas.png">
             <img class="dica" id="apocalipse" src="/dicas/apocalipse.png"> -->
         </div>
+        <div id="nome-autocomplete">
         <input type="text" id="nome-do-livro" maxlength="18">
+        </div>
         <img id="seta1" src="/imagens/icone-seta.png">
         <div id="despenser-livros">
         </div>
@@ -298,7 +301,6 @@
         <div class="caixa-dropped" id="at"></div>
         <div class="caixa-dropped" id="nt"></div>
     </div>
-    <script src="areaDeEspera.js"></script>
     <script src="scripts/LivroDaBiblia.js" defer></script>
     <script src="scripts/index.js" defer></script>
     <script src="scripts/cronometro.js"></script>
