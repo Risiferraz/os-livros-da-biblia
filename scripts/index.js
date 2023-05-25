@@ -94,31 +94,46 @@ document.getElementById("botao-despenser-dicas")
 .addEventListener("click",()=>{
 document.getElementById("dica").style.display="block"
 })
-
+let livroCorreto = null
 const cronometro = new Cronometro()
 setInterval(() => {
   cronometro.atualizaCronometro()
 }, 1000);
-
+const inputDeResposta = document.getElementById('nome-do-livro')
+const TEMPO_PARA_APARECER_ERRADO = 2000
+inputDeResposta.value = ""
 function sorteiaLivroDaVez() {
   const numeroAleatorio = Math.floor(Math.random() * listaDeLivros.length)
   if (listaDeNumerosAleatoriosJaSorteados.includes(numeroAleatorio)) {
     sorteiaLivroDaVez()
   }
   else {
+    livroCorreto = listaDeLivros[numeroAleatorio]
     listaDeLivros[numeroAleatorio].mostraLivro()
     listaDeNumerosAleatoriosJaSorteados.push(numeroAleatorio);
   }
 }
 
-document.getElementById('nome-do-livro').addEventListener('keyup', event=>{
+inputDeResposta.addEventListener('keyup', event=>{
   const valorDigitado = event.target.value
   listaDeLivros.filter(b=>b.id.startsWith(valorDigitado))
   .map(lb=>lb.id)//transformando a lista de libros em ids
   .forEach(id=>console.log(id))
 })
-
-
+function verificaSeAcertou() {
+  const resposta = inputDeResposta.value
+  if (livroCorreto.isRespostaCerta(resposta)){
+    inputDeResposta.style.color="#00ff00"
+  }
+  else{
+    inputDeResposta.style.color="#ff0000"
+    setTimeout(()=>acoesParaRespostaErrada(), TEMPO_PARA_APARECER_ERRADO)
+  }
+}
+function acoesParaRespostaErrada() {
+  inputDeResposta.style.color="#000000"
+  inputDeResposta.value = ""
+}
 
 function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
@@ -152,6 +167,7 @@ function autocomplete(inp, arr) {
               b.addEventListener("click", function(e) {
               /*insert the value for the autocomplete text field:*/
               inp.value = this.getElementsByTagName("input")[0].value;
+              verificaSeAcertou()
               /*close the list of autocompleted values,
               (or any other open lists of autocompleted values:*/
               closeAllLists();
