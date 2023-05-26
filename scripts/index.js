@@ -55,8 +55,8 @@ const listaDeLivros = [
   new LivroDaBiblia("2corintios", "/versiculos/2corintios.jpg", "/dicas/2corintios.png", "/livros/2co.png" ),
   new LivroDaBiblia("galatas", "/versiculos/galatas.jpg", "/dicas/galatas.png", "/livros/gl.png" ),
   new LivroDaBiblia("efesios", "/versiculos/efesios.jpg", "/dicas/efesios.png", "/livros/ef.png" ),
-  new LivroDaBiblia("filipenses", "/versiculos/filipenses.jpg", "/dicas/colossenses.png", "/livros/cl.png" ),
-  new LivroDaBiblia("colossenses", "/versiculos/colossenses.jpg", "/dicas/filipenses.png", "/livros/fl.png" ),
+  new LivroDaBiblia("filipenses", "/versiculos/filipenses.jpg", "/dicas/filipenses.png", "/livros/fl.png" ),
+  new LivroDaBiblia("colossenses", "/versiculos/colossenses.jpg", "/dicas/colossenses.png", "/livros/cl.png" ),
   new LivroDaBiblia("1tessalonicenses", "/versiculos/1tessalonicenses.jpg", "/dicas/1tessalonicenses.png", "/livros/1ts.png" ),
   new LivroDaBiblia("2tessalonicenses", "/versiculos/2tessalonicenses.jpg", "/dicas/2tessalonicenses.png", "/livros/2ts.png" ),
   new LivroDaBiblia("1timoteo", "/versiculos/1timoteo.jpg", "/dicas/1timoteo.png", "/livros/1tm.png" ),
@@ -123,9 +123,10 @@ inputDeResposta.addEventListener('keyup', event=>{
 function verificaSeAcertou() {
   const resposta = inputDeResposta.value
   if (livroCorreto.isRespostaCerta(resposta)){
-    inputDeResposta.style.color="#00ff00"
+    inputDeResposta.style.color="rgb(1, 21, 86)"
+    inputDeResposta.style.fontFamily="Swis721 BlkEx BT"
     livroCorreto.mostraRespostaCorreta()
-    // inputDeResposta.disabled = true remover o comentário quando fzaer lógica de colocar o livro no testamento correto
+    // inputDeResposta.disabled = true remover o comentário quando fizer a lógica de colocar o livro no testamento correto
   }
   else{
     inputDeResposta.style.color="#ff0000"
