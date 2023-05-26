@@ -124,6 +124,8 @@ function verificaSeAcertou() {
   const resposta = inputDeResposta.value
   if (livroCorreto.isRespostaCerta(resposta)){
     inputDeResposta.style.color="#00ff00"
+    livroCorreto.mostraRespostaCorreta()
+    // inputDeResposta.disabled = true remover o comentário quando fzaer lógica de colocar o livro no testamento correto
   }
   else{
     inputDeResposta.style.color="#ff0000"
