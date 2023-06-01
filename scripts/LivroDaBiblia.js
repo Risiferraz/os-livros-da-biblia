@@ -1,5 +1,6 @@
 class LivroDaBiblia {
-    constructor (id, src, dicaSRC, respostaSRC) {
+    constructor (testamento, id, src, dicaSRC, respostaSRC) {
+        this.testamento = testamento
         this.id=id
         this.src=src
         this.dicaSRC=dicaSRC
@@ -21,5 +22,14 @@ class LivroDaBiblia {
     }
     isRespostaCerta(resposta){
         return this.id == resposta
+    }
+    isVelhoTestamento(){
+        return this.testamento == "at"
+    }
+    isNovoTestamento(){
+        return this.testamento == "nt"
+    }
+    isDoTestamento(testamento){
+        return this.testamento == testamento
     }
 }
