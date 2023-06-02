@@ -251,8 +251,15 @@ document.addEventListener("drop", event => {
   // impedir a ação padrão (default) e assim permitir dropagem para elementos dragaveis)
   event.preventDefault();
   if (livroCorreto.isDoTestamento(event.target.id)) {
-    alert("ACERTOU")
+    realizaAcoesDeAcerto()
   } else {
     alert('ERROU')
   }
 });
+
+function realizaAcoesDeAcerto(){
+  livroCorreto.fechaABiblia()
+  dragged.style.display="none"
+  inputDeResposta.value = ""
+  document.getElementById("mensagem-de-acerto").style.display = "block"
+}

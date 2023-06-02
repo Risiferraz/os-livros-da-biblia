@@ -302,3 +302,7 @@ h2 {
     background-image: url("/imagens/novo-testamento.png");
     background-size: cover;
 }
+#mensagem-de-acerto {
+    display: none;
+    position: relative;
+}
