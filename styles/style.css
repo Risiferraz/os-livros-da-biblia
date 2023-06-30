@@ -292,6 +292,22 @@ h2 {
     box-shadow: rgba(0, 0, 0, 0.8) 5px 5px;
     margin: 5%;
 }
+.caixa-dropped-escolha {
+    display:flex;
+    /* justify-content: center; */
+    border: solid 1px #30250b;
+    box-shadow: rgba(0, 0, 0, 0.8) 5px 5px;
+    margin: 5%;
+    background-color: aqua;
+}
+.caixa-dropped-hover {
+    display:flex;
+    /* justify-content: center; */
+    border: solid 1px #30250b;
+    box-shadow: rgba(0, 0, 0, 0.8) 5px 5px;
+    margin: 5%;
+    background-color: #ff2f00;
+}
 #at {
     grid-area: 7 / 1 / span 1 / span 2;
     background-image: url("/imagens/velho-testamento.png");

@@ -248,11 +248,24 @@ autocomplete(document.getElementById("nome-do-livro"), listaDeLivros.map(b => b.
 
 document.addEventListener("dragstart", event => {
   dragged = event.target;
+  document.getElementById("at").classList.add("caixa-dropped-escolha")
+  document.getElementById("nt").classList.add("caixa-dropped-escolha")
 });
 document.addEventListener("dragend", event => {
   dragged = event.target;
+  document.getElementById("at").classList.remove("caixa-dropped-escolha")
+  document.getElementById("nt").classList.remove("caixa-dropped-escolha")
+  document.getElementById("at").classList.remove("caixa-dropped-hover")
+  document.getElementById("nt").classList.remove("caixa-dropped-hover")
+});
+document.addEventListener("dragleave", event => {
+  document.getElementById("at").classList.remove("caixa-dropped-hover")
+  document.getElementById("nt").classList.remove("caixa-dropped-hover")
 });
 document.addEventListener("dragover", event => {
+  if (event.target.id == "at" || event.target.id == "nt" ) {
+    document.getElementById(event.target.id).classList.add("caixa-dropped-hover")
+  }
   event.preventDefault();
 });
 document.addEventListener("drop", event => {
