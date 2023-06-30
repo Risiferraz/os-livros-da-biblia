@@ -62,7 +62,7 @@ const listaDeLivros = [
   new LivroDaBiblia("nt", "1timoteo", "/versiculos/1timoteo.jpg", "/dicas/1timoteo.png", "/livros/1tm.png"),
   new LivroDaBiblia("nt", "2timoteo", "/versiculos/2timoteo.jpg", "/dicas/2timoteo.png", "/livros/2tm.png"),
   new LivroDaBiblia("nt", "tito", "/versiculos/tito.jpg", "/dicas/tito.png", "/livros/tt.png"),
-  new LivroDaBiblia("nt", "filemom", "/versiculos/filemom.jpg", "/dicas/filemom.png", "/livros/fl.png"),
+  new LivroDaBiblia("nt", "filemom", "/versiculos/filemom.jpg", "/dicas/filemom.png", "/livros/fm.png"),
   new LivroDaBiblia("nt", "hebreus", "/versiculos/hebreus.jpg", "/dicas/hebreus.png", "/livros/hb.png"),
   new LivroDaBiblia("nt", "tiago", "/versiculos/tiago.jpg", "/dicas/tiago.png", "/livros/tg.png"),
   new LivroDaBiblia("nt", "1pedro", "/versiculos/1pedro.jpg", "/dicas/1pedro.png", "/livros/1pd.png"),
@@ -103,6 +103,7 @@ const inputDeResposta = document.getElementById('nome-do-livro')
 const TEMPO_PARA_APARECER_ERRADO = 2000
 inputDeResposta.value = ""
 function sorteiaLivroDaVez() {
+  // const numeroAleatorio=59
   const numeroAleatorio = Math.floor(Math.random() * listaDeLivros.length)
   if (listaDeNumerosAleatoriosJaSorteados.includes(numeroAleatorio)) {
     sorteiaLivroDaVez()
@@ -125,6 +126,13 @@ function verificaSeAcertou() {
   if (livroCorreto.isRespostaCerta(resposta)) {
     inputDeResposta.style.color = "rgb(1, 21, 86)"
     inputDeResposta.style.fontFamily = "Swis721 BlkEx BT"
+    if (resposta =="deuteronomio") {
+      inputDeResposta.style.fontSize = "18px"
+    }else if (resposta.length>12) {
+      inputDeResposta.style.fontSize = "15px"
+    }else{
+      inputDeResposta.style.fontSize = "22px"
+    }
     livroCorreto.mostraRespostaCorreta()
     // inputDeResposta.disabled = true remover o comentário quando fizer a lógica de colocar o livro no testamento correto
   }
