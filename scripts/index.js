@@ -274,7 +274,8 @@ document.addEventListener("drop", event => {
   if (livroCorreto.isDoTestamento(event.target.id)) {
     realizaAcoesDeAcerto()
   } else {
-    alert('ERROU')
+    document.getElementById("modal").checked=true
+    setTimeout(()=> document.getElementById("modal").checked=false, 2000)
   }
 });
 
