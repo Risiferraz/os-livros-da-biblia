@@ -274,8 +274,8 @@ document.addEventListener("drop", event => {
   if (livroCorreto.isDoTestamento(event.target.id)) {
     realizaAcoesDeAcerto()
   } else {
-    document.getElementById("modal").checked=true
-    setTimeout(()=> document.getElementById("modal").checked=false, 2000)
+    document.getElementById("modal-erro").checked=true
+    setTimeout(()=> document.getElementById("modal-erro").checked=false, 2000)
   }
 });
 
@@ -283,5 +283,7 @@ function realizaAcoesDeAcerto(){
   livroCorreto.fechaABiblia()
   dragged.style.display="none"
   inputDeResposta.value = ""
-  document.getElementById("mensagem-de-acerto").style.display = "block"
+  // document.getElementById("mensagem-de-acerto").style.display = "block"
+  document.getElementById("modal-acerto").checked=true
+  setTimeout(()=> document.getElementById("modal-acerto").checked=false, 2000)
 }
