@@ -330,25 +330,27 @@ h2 {
 #modal-acerto{
     display:none;
 }
-/* input[type="checkbox"] {
-	display:none;
-} */
-/* input[type="checkbox"]:checked ~ .modal-background, */
-/* .modal-background {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: none;
-    z-index: 9998;
-} */
-input[type="checkbox"]:checked ~ .modal {
+#modal-acerto:checked ~ .modal-certo {
+	display: block;
+}
+#modal-erro:checked ~ .modal-errado {
 	display: block;
 }
 
-.modal {
+.modal-certo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: none;	
+    width: 50%;
+    height: 50%;
+    box-sizing: border-box;
+    z-index: 9999;
+}
+.modal-errado {
     position: fixed;
     top: 0;
     left: 0;
