@@ -37,4 +37,7 @@ class LivroDaBiblia {
         livroElementoHTML.src = "/imagens/livrofechado.jpg"
         document.getElementById("dica").style.display = "none"
     }
+    pegaPrimeiraLetra() {
+        return this.id.charAt(0).toUpperCase()
+    }
 }

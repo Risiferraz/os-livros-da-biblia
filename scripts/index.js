@@ -143,7 +143,9 @@ function verificaSeAcertou() {
 }
 function acoesParaRespostaErrada() {
   inputDeResposta.style.color = "#000000"
+  const primeiraLetra = livroCorreto.pegaPrimeiraLetra()
   inputDeResposta.value = ""
+  document.getElementById("dica-bonus").innerHTML=`<p>O Livro começa com a letra: ${primeiraLetra}</p>`
 }
 
 function autocomplete(inp, arr) {
