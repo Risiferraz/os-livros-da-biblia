@@ -73,6 +73,7 @@ const listaDeLivros = [
   new LivroDaBiblia("nt", "judas", "/versiculos/judas.jpg", "/dicas/judas.png", "/livros/jd.png"),
   new LivroDaBiblia("nt", "apocalipse", "/versiculos/apocalipse.jpg", "/dicas/apocalipse.png", "/livros/ap.png"),
 ]
+const pontuacao = new Pontuacao("indicador")
 const listaDeNumerosAleatoriosJaSorteados = []
 let dragged = null
 // X-X-X-X-X-X-X-X-X-X-X- PÁGINA 1-X-X-X-X-X-X-X-X-X-X-X
@@ -91,8 +92,9 @@ livro.addEventListener("click", () => {
 })
 
 document.getElementById("botao-despenser-dicas")
-  .addEventListener("click", () => {
+    .addEventListener("click", () => {
     document.getElementById("dica").style.display = "block"
+    pontuacao.usandoDica()
   })
 let livroCorreto = null
 const cronometro = new Cronometro()
@@ -111,6 +113,7 @@ function sorteiaLivroDaVez() {
   else {
     livroCorreto = listaDeLivros[numeroAleatorio]
     listaDeLivros[numeroAleatorio].mostraLivro()
+    pontuacao.passandoParaNovoLivro()
     listaDeNumerosAleatoriosJaSorteados.push(numeroAleatorio);
   }
 }
@@ -126,15 +129,16 @@ function verificaSeAcertou() {
   if (livroCorreto.isRespostaCerta(resposta)) {
     inputDeResposta.style.color = "rgb(1, 21, 86)"
     inputDeResposta.style.fontFamily = "Swis721 BlkEx BT"
-    if (resposta =="deuteronomio") {
+    if (resposta == "deuteronomio") {
       inputDeResposta.style.fontSize = "18px"
-    }else if (resposta.length>12) {
+    } else if (resposta.length > 12) {
       inputDeResposta.style.fontSize = "15px"
-    }else{
+    } else {
       inputDeResposta.style.fontSize = "22px"
     }
     livroCorreto.mostraRespostaCorreta()
     // inputDeResposta.disabled = true remover o comentário quando fizer a lógica de colocar o livro no testamento correto
+    pontuacao.adicionaPontuacaoCorreta()
   }
   else {
     inputDeResposta.style.color = "#ff0000"
@@ -145,16 +149,17 @@ function acoesParaRespostaErrada() {
   inputDeResposta.style.color = "#000000"
   const primeiraLetra = livroCorreto.pegaPrimeiraLetra()
   inputDeResposta.value = ""
+  pontuacao.errando()
   if (isNaN(primeiraLetra)) {
-    document.getElementById("dica-bonus").innerHTML=`<p class="dica-extra">O nome deste livro começa com a letra:<strong> ${primeiraLetra}</strong><img src="imagens/mensagem-nova-dica.png"></p>`
+    document.getElementById("dica-bonus").innerHTML = `<p class="dica-extra">O nome deste livro começa com a letra:<strong> ${primeiraLetra}</strong><img src="imagens/mensagem-nova-dica.png"></p>`
   }
   else {
-    document.getElementById("dica-bonus").innerHTML=`<p class="dica-extra">O nome deste livro começa com o número:<strong> ${primeiraLetra}</strong><img src="imagens/mensagem-nova-dica.png"></p>`
+    document.getElementById("dica-bonus").innerHTML = `<p class="dica-extra">O nome deste livro começa com o número:<strong> ${primeiraLetra}</strong><img src="imagens/mensagem-nova-dica.png"></p>`
   }
   setTimeout(() => escondeModal(), 4000)
 }
 function escondeModal() {
-  document.getElementById("dica-bonus").innerHTML=""
+  document.getElementById("dica-bonus").innerHTML = ""
 }
 
 
@@ -275,7 +280,7 @@ document.addEventListener("dragleave", event => {
   document.getElementById("nt").classList.remove("caixa-dropped-hover")
 });
 document.addEventListener("dragover", event => {
-  if (event.target.id == "at" || event.target.id == "nt" ) {
+  if (event.target.id == "at" || event.target.id == "nt") {
     document.getElementById(event.target.id).classList.add("caixa-dropped-hover")
   }
   event.preventDefault();
@@ -289,19 +294,19 @@ document.addEventListener("drop", event => {
     realizaAcoesDeErro()
   }
 });
-function realizaAcoesDeErro(){
-  document.getElementById("modal-erro").checked=true
-  setTimeout(()=> {
-    document.getElementById("modal-erro").checked=false
+function realizaAcoesDeErro() {
+  document.getElementById("modal-erro").checked = true
+  setTimeout(() => {
+    document.getElementById("modal-erro").checked = false
   }, 2000)
 }
-function realizaAcoesDeAcerto(){
+function realizaAcoesDeAcerto() {
   livroCorreto.fechaABiblia()
-  dragged.style.display="none"
+  dragged.style.display = "none"
   inputDeResposta.value = ""
   // document.getElementById("mensagem-de-acerto").style.display = "block"
-  document.getElementById("modal-acerto").checked=true
-  setTimeout(()=> {
-    document.getElementById("modal-acerto").checked=false
+  document.getElementById("modal-acerto").checked = true
+  setTimeout(() => {
+    document.getElementById("modal-acerto").checked = false
   }, 2000)
 }
