@@ -363,4 +363,21 @@ h2 {
     box-sizing: border-box;
     z-index: 9999;
 }
-
+.dica-extra {
+    background-color: aqua;
+    box-sizing: border-box;
+    width: 50vw;
+    height: 50vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 9999;
+    text-align: center;
+    background-color: #fdb417;
+}
+/* #dica-bonus {
+    display: none;	
+} */

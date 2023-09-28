@@ -145,8 +145,18 @@ function acoesParaRespostaErrada() {
   inputDeResposta.style.color = "#000000"
   const primeiraLetra = livroCorreto.pegaPrimeiraLetra()
   inputDeResposta.value = ""
-  document.getElementById("dica-bonus").innerHTML=`<p>O Livro começa com a letra: ${primeiraLetra}</p>`
+  if (isNaN(primeiraLetra)) {
+    document.getElementById("dica-bonus").innerHTML=`<p class="dica-extra">O nome deste livro começa com a letra:<strong> ${primeiraLetra}</strong><img src="imagens/mensagem-nova-dica.png"></p>`
+  }
+  else {
+    document.getElementById("dica-bonus").innerHTML=`<p class="dica-extra">O nome deste livro começa com o número:<strong> ${primeiraLetra}</strong><img src="imagens/mensagem-nova-dica.png"></p>`
+  }
+  setTimeout(() => escondeModal(), 4000)
 }
+function escondeModal() {
+  document.getElementById("dica-bonus").innerHTML=""
+}
+
 
 function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
