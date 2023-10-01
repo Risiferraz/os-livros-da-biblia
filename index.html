@@ -213,8 +213,6 @@
             <img class="dica" id="judas" src="/dicas/judas.png">
             <img class="dica" id="apocalipse" src="/dicas/apocalipse.png"> -->
         </div>
-        <div id="dica-bonus">
-        </div>
         <div id="nome-autocomplete">
             <input type="text" id="nome-do-livro" maxlength="18">
         </div>
@@ -303,8 +301,9 @@
         <div class="caixa-dropped" id="at"></div>
         <div class="caixa-dropped" id="nt"></div>
     </div>
-    <img src="imagens\gameover.png" id="mensagem-final">
-
+    <!--ABAIXO MENSAGENS TEMPORÁRIAS-->
+    <div id="dica-bonus"></div>
+    
     <input type="checkbox" id="modal-erro">
     <div class="modal-errado">
         <img src="imagens\mensagem-de-erro.png" id="mensagem-de-erro">
@@ -313,6 +312,14 @@
     <div class="modal-certo">
         <img src="imagens\mensagem-de-acerto.png" id="mensagem-de-acerto">
     </div>
+    <!-- (div criada temporariamente para facilitar a estilização da "dica-bônus") -->
+    <!--<div id="teste-mensagem-dica-extra">
+        <img src="imagens\mensagem-nova-dica.png" id="imagem-de-fundo">
+        <p id="mensagem-dica-extra">"X"</p>
+    </div>-->
+
+    <img src="imagens\gameover.png" id="mensagem-final">
+
     <script src="scripts/pontuacao.js" defer></script>
     <script src="scripts/LivroDaBiblia.js" defer></script>
     <script src="scripts/index.js" defer></script>

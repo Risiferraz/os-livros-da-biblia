@@ -151,17 +151,23 @@ function acoesParaRespostaErrada() {
   inputDeResposta.value = ""
   pontuacao.errando()
   if (isNaN(primeiraLetra)) {
-    document.getElementById("dica-bonus").innerHTML = `<p class="dica-extra">O nome deste livro começa com a letra:<strong> ${primeiraLetra}</strong><img src="imagens/mensagem-nova-dica.png"></p>`
+    document.getElementById("dica-bonus").innerHTML =
+    `<p class="dica-extra">"<strong>${primeiraLetra}</strong>"
+    <img id="imagem-de-fundo src="imagens/mensagem-nova-dica-letra.png"></p>`
   }
   else {
-    document.getElementById("dica-bonus").innerHTML = `<p class="dica-extra">O nome deste livro começa com o número:<strong> ${primeiraLetra}</strong><img src="imagens/mensagem-nova-dica.png"></p>`
+    document.getElementById("dica-bonus").innerHTML =
+    `<p class="dica-extra">"<strong>${primeiraLetra}</strong>"
+    <img id="imagem-de-fundo src="imagens/mensagem-nova-dica-numero.png"></p>`
   }
   setTimeout(() => escondeModal(), 4000)
 }
 function escondeModal() {
   document.getElementById("dica-bonus").innerHTML = ""
+  // document.getElementsByClassName("dica-extra").innerHTML = ""
+  // document.getElementsByClassName("dica-extra").style.zIndex = "0"
+  // document.getElementsById("dica-bonus").style.zIndex = "-1"
 }
-
 
 function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
@@ -308,5 +314,5 @@ function realizaAcoesDeAcerto() {
   document.getElementById("modal-acerto").checked = true
   setTimeout(() => {
     document.getElementById("modal-acerto").checked = false
-  }, 2000)
+  }, 1200)
 }

@@ -336,7 +336,6 @@ h2 {
 #modal-erro:checked ~ .modal-errado {
 	display: block;
 }
-
 .modal-certo {
     position: fixed;
     top: 0;
@@ -363,21 +362,51 @@ h2 {
     box-sizing: border-box;
     z-index: 9999;
 }
-.dica-extra {
-    background-color: aqua;
+#dica-bonus {
     box-sizing: border-box;
     width: 50vw;
-    height: 50vw;
-    position: fixed;
+    height: 60vw;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     margin: auto;
-    z-index: 9999;
-    text-align: center;
-    background-color: #fdb417;
+    z-index: -1;
+    background-image: url("/imagens/mensagem-nova-dica.png");
 }
-/* #dica-bonus {
-    display: none;	
+.dica-extra {
+    position: absolute;
+    top: 25%;
+    left: 46%;
+    font-size: 30px;
+    font-family: 'Swis721 BlkEx BT','Charlesworth', 'Arial Narrow', Arial, sans-serif;
+}
+/*estilo criado temporariamente para facilitar mensagem oculta dica-bônus*/
+/* #teste-mensagem-dica-extra {
+    box-sizing: border-box;
+    width: 50vw;
+    height: 60vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 10;
+    text-align: center;
+    background-color: #ca992f;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} */
+/* #mensagem-dica-extra {
+    position: absolute;
+    top: 25%;
+    left: 46%;
+    font-size: 30px;
+    font-family: 'Swis721 BlkEx BT','Charlesworth', 'Arial Narrow', Arial, sans-serif;
+} */
+/* #imagem-de-fundo {
+    width: 100%;
+    z-index: 3;
 } */
