@@ -152,21 +152,20 @@ function acoesParaRespostaErrada() {
   pontuacao.errando()
   if (isNaN(primeiraLetra)) {
     document.getElementById("dica-bonus").innerHTML =
-    `<p class="dica-extra">"<strong>${primeiraLetra}</strong>"
-    <img id="imagem-de-fundo src="imagens/mensagem-nova-dica-letra.png"></p>`
+    `<p class="dica-extra">"<strong>${primeiraLetra}</strong>"</p>
+    <img id="imagem-de-fundo" src="imagens/mensagem-nova-dica-letra.png">`
   }
   else {
     document.getElementById("dica-bonus").innerHTML =
-    `<p class="dica-extra">"<strong>${primeiraLetra}</strong>"
-    <img id="imagem-de-fundo src="imagens/mensagem-nova-dica-numero.png"></p>`
+    `<p class="dica-extra">"<strong>${primeiraLetra}</strong>"</p>
+    <img id="imagem-de-fundo" src="imagens/mensagem-nova-dica-numero.png">`
   }
+  document.getElementById("dica-bonus").style.zIndex = "9999"
   setTimeout(() => escondeModal(), 4000)
 }
 function escondeModal() {
   document.getElementById("dica-bonus").innerHTML = ""
-  // document.getElementsByClassName("dica-extra").innerHTML = ""
-  // document.getElementsByClassName("dica-extra").style.zIndex = "0"
-  // document.getElementsById("dica-bonus").style.zIndex = "-1"
+  document.getElementById("dica-bonus").style.zIndex = "-20"
 }
 
 function autocomplete(inp, arr) {

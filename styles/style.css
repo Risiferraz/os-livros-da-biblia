@@ -372,8 +372,7 @@ h2 {
     right: 0;
     bottom: 0;
     margin: auto;
-    z-index: -1;
-    background-image: url("/imagens/mensagem-nova-dica.png");
+    z-index: -20;
 }
 .dica-extra {
     position: absolute;
