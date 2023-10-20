@@ -300,12 +300,14 @@ document.addEventListener("drop", event => {
   }
 });
 function realizaAcoesDeErro() {
+  pontuacao.errandoTestamento()
   document.getElementById("modal-erro").checked = true
   setTimeout(() => {
     document.getElementById("modal-erro").checked = false
   }, 2000)
 }
 function realizaAcoesDeAcerto() {
+  pontuacao.adicionaPontuacaoCorretaTestamento()
   livroCorreto.fechaABiblia()
   dragged.style.display = "none"
   inputDeResposta.value = ""

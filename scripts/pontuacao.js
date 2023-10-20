@@ -5,9 +5,17 @@ class Pontuacao {
         this.pontosDoJogador = 0
         this.usouDica = false
         this.errou = false
+        this.errouTestamento = false
     }
     atualizaPontuacao() {
         this.elementoHtml.textContent = this.pontosDoJogador
+        this.animacaoDeMudancaDePontuacao()
+    }
+    animacaoDeMudancaDePontuacao() {
+        this.elementoHtml.style.color="white"
+        setTimeout(()=>{
+            this.elementoHtml.style.color="black"
+        },2000)
     }
     pegaPontoParaAcertoSemDica() {
         return 10
@@ -21,6 +29,7 @@ class Pontuacao {
     passandoParaNovoLivro() {
         this.usouDica = false
         this.errou = false
+        this.errouTestamento = false
     }
     adicionaPontuacaoCorreta() {
         this.pontosDoJogador += this.pegaPontuacaoCerta()
@@ -43,5 +52,27 @@ class Pontuacao {
     }
     errando() {
         this.errou = true
+    }
+    errandoTestamento() {
+        this.errouTestamento = true
+    }
+    adicionaPontuacaoCorretaTestamento(){
+        this.pontosDoJogador += this.pegaPontuacaoCertaTestamento()
+        this.atualizaPontuacao()
+        this.passandoParaNovoLivro()
+    }
+    pegaPontuacaoCertaTestamento(){
+        if (this.errouTestamento) {
+            return this.pegaPontoParaAcertoComErroTestamento()
+        }
+        else {
+            return this.pegaPontoParaAcertoSemErroTestamento()
+        }
+    }
+    pegaPontoParaAcertoComErroTestamento() {
+        return 1
+    }
+    pegaPontoParaAcertoSemErroTestamento() {
+        return 5
     }
 }
