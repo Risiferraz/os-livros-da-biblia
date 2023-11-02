@@ -77,7 +77,25 @@ const pontuacao = new Pontuacao("indicador")
 const listaDeNumerosAleatoriosJaSorteados = []
 let dragged = null
 // X-X-X-X-X-X-X-X-X-X-X- PÁGINA 1-X-X-X-X-X-X-X-X-X-X-X
-function clicar() {
+function clicarVT() {
+  document.getElementById("pagina1").style.display = "none"
+  document.getElementById("velho-testamento").style.display = "grid"
+}
+function clicarNT() {
+  document.getElementById("pagina1").style.display = "none"
+  document.getElementById("novo-testamento").style.display = "grid"
+}
+function clicarAP() {
+  document.getElementById("pagina1").style.display = "none"
+  document.getElementById("apocrifos").style.display = "grid"
+}
+function clicarRetornar() {
+  document.getElementById("velho-testamento").style.display = "none"
+  document.getElementById("novo-testamento").style.display = "none"
+  document.getElementById("apocrifos").style.display = "none"
+  document.getElementById("pagina1").style.display = "block"
+}
+function clicarStart() {
   document.getElementById("pagina1").style.display = "none"
   document.getElementById("pagina2").style.display = "grid"
   cronometro.iniciaCronometro()
@@ -92,7 +110,7 @@ livro.addEventListener("click", () => {
 })
 
 document.getElementById("botao-despenser-dicas")
-    .addEventListener("click", () => {
+  .addEventListener("click", () => {
     document.getElementById("dica").style.display = "block"
     pontuacao.usandoDica()
   })
@@ -121,7 +139,7 @@ function sorteiaLivroDaVez() {
 inputDeResposta.addEventListener('keyup', event => {
   const valorDigitado = event.target.value
   listaDeLivros.filter(b => b.id.startsWith(valorDigitado))
-    .map(lb => lb.id)//transformando a lista de libros em ids
+    .map(lb => lb.id)//transformando a lista de livros em ids
     .forEach(id => console.log(id))
 })
 function verificaSeAcertou() {
@@ -137,7 +155,7 @@ function verificaSeAcertou() {
       inputDeResposta.style.fontSize = "22px"
     }
     livroCorreto.mostraRespostaCorreta()
-    // inputDeResposta.disabled = true remover o comentário quando fizer a lógica de colocar o livro no testamento correto
+    // inputDeResposta.disabled = true (remover o comentário quando fizer a lógica de colocar o livro no testamento correto)
     pontuacao.adicionaPontuacaoCorreta()
   }
   else {
@@ -152,12 +170,12 @@ function acoesParaRespostaErrada() {
   pontuacao.errando()
   if (isNaN(primeiraLetra)) {
     document.getElementById("dica-bonus").innerHTML =
-    `<p class="dica-extra">"<strong>${primeiraLetra}</strong>"</p>
+      `<p class="dica-extra">"<strong>${primeiraLetra}</strong>"</p>
     <img id="imagem-de-fundo" src="imagens/mensagem-nova-dica-letra.png">`
   }
   else {
     document.getElementById("dica-bonus").innerHTML =
-    `<p class="dica-extra">"<strong>${primeiraLetra}</strong>"</p>
+      `<p class="dica-extra">"<strong>${primeiraLetra}</strong>"</p>
     <img id="imagem-de-fundo" src="imagens/mensagem-nova-dica-numero.png">`
   }
   document.getElementById("dica-bonus").style.zIndex = "9999"
@@ -306,6 +324,7 @@ function realizaAcoesDeErro() {
     document.getElementById("modal-erro").checked = false
   }, 2000)
 }
+
 function realizaAcoesDeAcerto() {
   pontuacao.adicionaPontuacaoCorretaTestamento()
   livroCorreto.fechaABiblia()

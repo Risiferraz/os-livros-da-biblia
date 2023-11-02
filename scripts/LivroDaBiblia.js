@@ -30,6 +30,8 @@ class LivroDaBiblia {
         return this.testamento == "nt"
     }
     isDoTestamento(testamento) {
+        if (testamento == "img-cx-nt") testamento="nt"
+        if (testamento == "img-cx-at") testamento="at"
         return this.testamento == testamento
     }
     fechaABiblia() {
