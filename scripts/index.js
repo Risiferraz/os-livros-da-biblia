@@ -182,7 +182,7 @@ function acoesParaRespostaErrada() {
     <img id="imagem-de-fundo" src="imagens/mensagem-nova-dica-numero.png">`
   }
   document.getElementById("dica-bonus").style.zIndex = "9999"
-  setTimeout(() => escondeModal(), 4000)
+  setTimeout(() => escondeModal(), 5000)
 }
 function escondeModal() {
   document.getElementById("dica-bonus").innerHTML = ""
@@ -325,7 +325,7 @@ function realizaAcoesDeErro() {
   document.getElementById("modal-erro").checked = true
   setTimeout(() => {
     document.getElementById("modal-erro").checked = false
-  }, 2000)
+  }, 500)
 }
 
 function realizaAcoesDeAcerto() {
