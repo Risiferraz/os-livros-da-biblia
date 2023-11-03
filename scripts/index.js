@@ -75,6 +75,7 @@ const listaDeLivros = [
 ]
 const pontuacao = new Pontuacao("indicador")
 const listaDeNumerosAleatoriosJaSorteados = []
+const listaDeLivrosJaAcertados = []
 let dragged = null
 // X-X-X-X-X-X-X-X-X-X-X- PÁGINA 1-X-X-X-X-X-X-X-X-X-X-X
 function clicarVT() {
@@ -157,6 +158,8 @@ function verificaSeAcertou() {
     livroCorreto.mostraRespostaCorreta()
     // inputDeResposta.disabled = true (remover o comentário quando fizer a lógica de colocar o livro no testamento correto)
     pontuacao.adicionaPontuacaoCorreta()
+    listaDeLivrosJaAcertados.push(livroCorreto.id)
+    console.table(listaDeLivrosJaAcertados)
   }
   else {
     inputDeResposta.style.color = "#ff0000"
