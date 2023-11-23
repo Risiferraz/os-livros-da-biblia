@@ -325,7 +325,7 @@ function realizaAcoesDeErro() {
   document.getElementById("modal-erro").checked = true
   setTimeout(() => {
     document.getElementById("modal-erro").checked = false
-  }, 500)
+  }, 1200)
 }
 
 function realizaAcoesDeAcerto() {
