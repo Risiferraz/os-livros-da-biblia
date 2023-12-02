@@ -210,12 +210,12 @@ function autocomplete(inp, arr) {
     for (i = 0; i < arr.length; i++) {
       /*check if the item starts with the same letters as the text field value:*/
       let propriedadesDosEstilos = {
-        corDoTexto: "#000000",
-        corDoFundo: "white",
+        clicavel: true,
+        classeParaAdicionar:"habilitado"
       }
       if (listaDeLivrosJaAcertados.includes(arr[i])) {
-        propriedadesDosEstilos.corDoTexto = "rgba(224, 218, 221, 0.8)";
-        propriedadesDosEstilos.corDoFundo = "red";
+        propriedadesDosEstilos.clicavel = false
+        propriedadesDosEstilos.classeParaAdicionar = "desabilitado"
       }
       if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
         /*create a DIV element for each matching element:*/
@@ -223,19 +223,20 @@ function autocomplete(inp, arr) {
         /*make the matching letters bold:*/
         b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
         b.innerHTML += arr[i].substr(val.length);
-        /*insert a input field that will hold the current array item's value:*/
-        b.style.color = propriedadesDosEstilos.corDoTexto
-        b.style.backgroundColor = propriedadesDosEstilos.corDoFundo
+        
+        b.classList.add(propriedadesDosEstilos.classeParaAdicionar)
         b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-        /*execute a function when someone clicks on the item value (DIV element):*/
-        b.addEventListener("click", function (e) {
-          /*insert the value for the autocomplete text field:*/
-          inp.value = this.getElementsByTagName("input")[0].value;
-          verificaSeAcertou()
-          /*close the list of autocompleted values,
-          (or any other open lists of autocompleted values:*/
-          closeAllLists();
-        });
+        if (propriedadesDosEstilos.clicavel) {
+          /*execute a function when someone clicks on the item value (DIV element):*/
+          b.addEventListener("click", function (e) {
+            /*insert the value for the autocomplete text field:*/
+            inp.value = this.getElementsByTagName("input")[0].value;
+            verificaSeAcertou()
+            /*close the list of autocompleted values,
+            (or any other open lists of autocompleted values:*/
+            closeAllLists();
+          });
+        }
         a.appendChild(b);
       }
     }
