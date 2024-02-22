@@ -172,6 +172,7 @@ function verificaSeAcertou() {
 }
 function acoesParaRespostaErrada() {
   inputDeResposta.style.color = "#000000"
+  inputDeResposta.style.fontSize = "15px"
   const primeiraLetra = livroCorreto.pegaPrimeiraLetra()
   inputDeResposta.value = ""
   pontuacao.errando()
