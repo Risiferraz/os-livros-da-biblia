@@ -57,8 +57,8 @@ const listaDeLivros = [
   // new LivroDaBiblia("nt", "efesios", "/versiculos/efesios.jpg", "/dicas/efesios.png", "/livros/ef.png"),
   // new LivroDaBiblia("nt", "filipenses", "/versiculos/filipenses.jpg", "/dicas/filipenses.png", "/livros/fl.png"),
   // new LivroDaBiblia("nt", "colossenses", "/versiculos/colossenses.jpg", "/dicas/colossenses.png", "/livros/cl.png"),
-  // new LivroDaBiblia("nt", "1tessalonicenses", "/versiculos/1tessalonicenses.jpg", "/dicas/1tessalonicenses.png", "/livros/1ts.png"),
-  // new LivroDaBiblia("nt", "2tessalonicenses", "/versiculos/2tessalonicenses.jpg", "/dicas/2tessalonicenses.png", "/livros/2ts.png"),
+  new LivroDaBiblia("nt", "1tessalonicenses", "/versiculos/1tessalonicenses.jpg", "/dicas/1tessalonicenses.png", "/livros/1ts.png"),
+  new LivroDaBiblia("nt", "2tessalonicenses", "/versiculos/2tessalonicenses.jpg", "/dicas/2tessalonicenses.png", "/livros/2ts.png"),
   // new LivroDaBiblia("nt", "1timoteo", "/versiculos/1timoteo.jpg", "/dicas/1timoteo.png", "/livros/1tm.png"),
   // new LivroDaBiblia("nt", "2timoteo", "/versiculos/2timoteo.jpg", "/dicas/2timoteo.png", "/livros/2tm.png"),
   // new LivroDaBiblia("nt", "tito", "/versiculos/tito.jpg", "/dicas/tito.png", "/livros/tt.png"),
@@ -78,6 +78,7 @@ const listaDeNumerosAleatoriosJaSorteados = []
 const listaDeLivrosJaAcertados = []
 let ultimoNumeroSorteado = 999
 let dragged = null
+const gerenciadorDeErros = new GerenciadorDeErros()
 // X-X-X-X-X-X-X-X-X-X-X- PÁGINA 1-X-X-X-X-X-X-X-X-X-X-X
 function clicarVT() {
   document.getElementById("pagina1").style.display = "none"
@@ -172,9 +173,14 @@ function verificaSeAcertou() {
 }
 function acoesParaRespostaErrada() {
   inputDeResposta.style.color = "#000000"
-  inputDeResposta.style.fontSize = "15px"
+  inputDeResposta.style.fontSize = "18px"
   const primeiraLetra = livroCorreto.pegaPrimeiraLetra()
   inputDeResposta.value = ""
+  gerenciadorDeErros.adicionaErro()
+  if (gerenciadorDeErros.isPassarAVez()){
+    alert("PASSANDO A VEZ")
+    gerenciadorDeErros.zerarQuantidadeDeErros()
+  }
   pontuacao.errando()
   if (isNaN(primeiraLetra)) {
     document.getElementById("dica-bonus").innerHTML =
