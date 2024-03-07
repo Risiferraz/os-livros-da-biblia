@@ -140,7 +140,6 @@ function sorteiaLivroDaVez() {
     // listaDeNumerosAleatoriosJaSorteados.push(numeroAleatorio);
   }
 }
-
 inputDeResposta.addEventListener('keyup', event => {
   const valorDigitado = event.target.value
   listaDeLivros.filter(b => b.id.startsWith(valorDigitado))
@@ -178,22 +177,24 @@ function acoesParaRespostaErrada() {
   inputDeResposta.value = ""
   gerenciadorDeErros.adicionaErro()
   if (gerenciadorDeErros.isPassarAVez()){
-    alert("PASSANDO A VEZ")
     gerenciadorDeErros.zerarQuantidadeDeErros()
-  }
-  pontuacao.errando()
-  if (isNaN(primeiraLetra)) {
-    document.getElementById("dica-bonus").innerHTML =
-      `<p class="dica-extra">"<strong>${primeiraLetra}</strong>"</p>
-    <img id="imagem-de-fundo" src="imagens/mensagem-nova-dica-letra.png">`
+    livroCorreto.fechaABiblia()
   }
   else {
-    document.getElementById("dica-bonus").innerHTML =
-      `<p class="dica-extra">"<strong>${primeiraLetra}</strong>"</p>
-    <img id="imagem-de-fundo" src="imagens/mensagem-nova-dica-numero.png">`
+    pontuacao.errando()
+    if (isNaN(primeiraLetra)) {
+      document.getElementById("dica-bonus").innerHTML =
+        `<p class="dica-extra">"<strong>${primeiraLetra}</strong>"</p>
+      <img id="imagem-de-fundo" src="imagens/mensagem-nova-dica-letra.png">`
+    }
+    else {
+      document.getElementById("dica-bonus").innerHTML =
+        `<p class="dica-extra">"<strong>${primeiraLetra}</strong>"</p>
+      <img id="imagem-de-fundo" src="imagens/mensagem-nova-dica-numero.png">`
+    }
+    document.getElementById("dica-bonus").style.zIndex = "9999"
+    setTimeout(() => escondeModal(), 5000)
   }
-  document.getElementById("dica-bonus").style.zIndex = "9999"
-  setTimeout(() => escondeModal(), 5000)
 }
 function escondeModal() {
   document.getElementById("dica-bonus").innerHTML = ""
