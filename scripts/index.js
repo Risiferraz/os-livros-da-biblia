@@ -126,14 +126,18 @@ const inputDeResposta = document.getElementById('nome-do-livro')
 const TEMPO_PARA_APARECER_ERRADO = 2000
 inputDeResposta.value = ""
 function sorteiaLivroDaVez() {
+  console.log("Lista de números já sorteados: ", listaDeNumerosAleatoriosJaSorteados)
   // const numeroAleatorio=59
+  console.log("Sorteando novo livro")
+  console.log("Último número sorteado: "+ultimoNumeroSorteado)
   const numeroAleatorio = Math.floor(Math.random() * listaDeLivros.length)
-  if (listaDeNumerosAleatoriosJaSorteados.includes(numeroAleatorio)
-  && numeroAleatorio != ultimoNumeroSorteado) {
+  console.log("Último número aleatório: "+numeroAleatorio)
+  if (listaDeNumerosAleatoriosJaSorteados.includes(numeroAleatorio)) {
     sorteiaLivroDaVez()
   }
   else {
     livroCorreto = listaDeLivros[numeroAleatorio]
+    console.log("O número sorteado foi: "+numeroAleatorio)
     listaDeLivros[numeroAleatorio].mostraLivro()
     pontuacao.passandoParaNovoLivro()
     ultimoNumeroSorteado = numeroAleatorio
@@ -149,6 +153,7 @@ inputDeResposta.addEventListener('keyup', event => {
 function verificaSeAcertou() {
   const resposta = inputDeResposta.value
   if (livroCorreto.isRespostaCerta(resposta)) {
+    listaDeNumerosAleatoriosJaSorteados.push(ultimoNumeroSorteado);
     inputDeResposta.style.color = "rgb(1, 21, 86)"
     inputDeResposta.style.fontFamily = "Swis721 BlkEx BT"
     if (resposta == "deuteronomio") {
@@ -162,7 +167,7 @@ function verificaSeAcertou() {
     // inputDeResposta.disabled = true (remover o comentário quando fizer a lógica de colocar o livro no testamento correto)
     pontuacao.adicionaPontuacaoCorreta()
     listaDeLivrosJaAcertados.push(livroCorreto.id)
-    listaDeNumerosAleatoriosJaSorteados.push(ultimoNumeroSorteado);
+    console.log("linha166")
     console.table(listaDeLivrosJaAcertados)
   }
   else {
@@ -177,10 +182,12 @@ function acoesParaRespostaErrada() {
   inputDeResposta.value = ""
   gerenciadorDeErros.adicionaErro()
   if (gerenciadorDeErros.isPassarAVez()){
+    console.log("passando a vez")
     gerenciadorDeErros.zerarQuantidadeDeErros()
     livroCorreto.fechaABiblia()
   }
   else {
+    console.log("errou")
     pontuacao.errando()
     if (isNaN(primeiraLetra)) {
       document.getElementById("dica-bonus").innerHTML =
