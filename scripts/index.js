@@ -1,54 +1,54 @@
 const listaDeLivros = [
-  new LivroDaBiblia("at", "genesis", "/versiculos/genesis.jpg", "/dicas/genesis.png", "/livros/gn.png"),
-  new LivroDaBiblia("at", "exodo", "/versiculos/exodo.jpg", "/dicas/exodo.png", "/livros/ex.png"),
-  new LivroDaBiblia("at", "levitico", "/versiculos/levitico.jpg", "/dicas/levitico.png", "/livros/lv.png"),
-  new LivroDaBiblia("at", "numeros", "/versiculos/numeros.jpg", "/dicas/numeros.png", "/livros/nm.png"),
+  // new LivroDaBiblia("at", "genesis", "/versiculos/genesis.jpg", "/dicas/genesis.png", "/livros/gn.png"),
+  // new LivroDaBiblia("at", "exodo", "/versiculos/exodo.jpg", "/dicas/exodo.png", "/livros/ex.png"),
+  // new LivroDaBiblia("at", "levitico", "/versiculos/levitico.jpg", "/dicas/levitico.png", "/livros/lv.png"),
+  // new LivroDaBiblia("at", "numeros", "/versiculos/numeros.jpg", "/dicas/numeros.png", "/livros/nm.png"),
   new LivroDaBiblia("at", "deuteronomio", "/versiculos/deuteronomio.jpg", "/dicas/deuteronomio.png", "/livros/dt.png"),
-  new LivroDaBiblia("at", "josue", "/versiculos/josue.jpg", "/dicas/josue.png", "/livros/js.png"),
-  new LivroDaBiblia("at", "juizes", "/versiculos/juizes.jpg", "/dicas/juizes.png", "/livros/jz.png"),
-  new LivroDaBiblia("at", "rute", "/versiculos/rute.jpg", "/dicas/rute.png", "/livros/rt.png"),
-  new LivroDaBiblia("at", "1samuel", "/versiculos/1samuel.jpg", "/dicas/1samuel.png", "/livros/1sm.png"),
-  new LivroDaBiblia("at", "2samuel", "/versiculos/2samuel.jpg", "/dicas/2samuel.png", "/livros/2sm.png"),
-  new LivroDaBiblia("at", "1reis", "/versiculos/1reis.jpg", "/dicas/1reis.png", "/livros/1rs.png"),
-  new LivroDaBiblia("at", "2reis", "/versiculos/2reis.jpg", "/dicas/2reis.png", "/livros/2rs.png"),
-  new LivroDaBiblia("at", "1cronicas", "/versiculos/1cronicas.jpg", "/dicas/1cronicas.png", "/livros/1cr.png"),
-  new LivroDaBiblia("at", "2cronicas", "/versiculos/2cronicas.jpg", "/dicas/2cronicas.png", "/livros/2cr.png"),
-  new LivroDaBiblia("at", "esdras", "/versiculos/esdras.jpg", "/dicas/esdras.png", "/livros/ed.png"),
-  new LivroDaBiblia("at", "neemias", "/versiculos/neemias.jpg", "/dicas/neemias.png", "/livros/ne.png"),
-  new LivroDaBiblia("at", "tobias", "/versiculos/tobias.jpg", "/dicas/tobias.png", "/livros/tobias.png"),
-  new LivroDaBiblia("at", "judite", "/versiculos/judite.jpg", "/dicas/judite.png", "/livros/judite.png"),
-  new LivroDaBiblia("at", "ester", "/versiculos/ester.jpg", "/dicas/ester.png", "/livros/et.png"),
-  new LivroDaBiblia("at", "jo", "/versiculos/jo.jpg", "/dicas/jo.png", "/livros/jo.png"),
-  new LivroDaBiblia("at", "salmos", "/versiculos/salmos.jpg", "/dicas/salmos.png", "/livros/sl.png"),
+  // new LivroDaBiblia("at", "josue", "/versiculos/josue.jpg", "/dicas/josue.png", "/livros/js.png"),
+  // new LivroDaBiblia("at", "juizes", "/versiculos/juizes.jpg", "/dicas/juizes.png", "/livros/jz.png"),
+  // new LivroDaBiblia("at", "rute", "/versiculos/rute.jpg", "/dicas/rute.png", "/livros/rt.png"),
+  // new LivroDaBiblia("at", "1samuel", "/versiculos/1samuel.jpg", "/dicas/1samuel.png", "/livros/1sm.png"),
+  // new LivroDaBiblia("at", "2samuel", "/versiculos/2samuel.jpg", "/dicas/2samuel.png", "/livros/2sm.png"),
+  // new LivroDaBiblia("at", "1reis", "/versiculos/1reis.jpg", "/dicas/1reis.png", "/livros/1rs.png"),
+  // new LivroDaBiblia("at", "2reis", "/versiculos/2reis.jpg", "/dicas/2reis.png", "/livros/2rs.png"),
+  // new LivroDaBiblia("at", "1cronicas", "/versiculos/1cronicas.jpg", "/dicas/1cronicas.png", "/livros/1cr.png"),
+  // new LivroDaBiblia("at", "2cronicas", "/versiculos/2cronicas.jpg", "/dicas/2cronicas.png", "/livros/2cr.png"),
+  // new LivroDaBiblia("at", "esdras", "/versiculos/esdras.jpg", "/dicas/esdras.png", "/livros/ed.png"),
+  // new LivroDaBiblia("at", "neemias", "/versiculos/neemias.jpg", "/dicas/neemias.png", "/livros/ne.png"),
+  // new LivroDaBiblia("at", "tobias", "/versiculos/tobias.jpg", "/dicas/tobias.png", "/livros/tobias.png"),
+  // new LivroDaBiblia("at", "judite", "/versiculos/judite.jpg", "/dicas/judite.png", "/livros/judite.png"),
+  // new LivroDaBiblia("at", "ester", "/versiculos/ester.jpg", "/dicas/ester.png", "/livros/et.png"),
+  // new LivroDaBiblia("at", "jo", "/versiculos/jo.jpg", "/dicas/jo.png", "/livros/jo.png"),
+  // new LivroDaBiblia("at", "salmos", "/versiculos/salmos.jpg", "/dicas/salmos.png", "/livros/sl.png"),
   new LivroDaBiblia("at", "1macabeus", "/versiculos/1macabeus.jpg", "/dicas/1macabeus.png", "/livros/1macabeus.png"),
   new LivroDaBiblia("at", "2macabeus", "/versiculos/2macabeus.jpg", "/dicas/2macabeus.png", "/livros/2macabeus.png"),
   new LivroDaBiblia("at", "proverbios", "/versiculos/proverbios.jpg", "/dicas/proverbios.png", "/livros/pv.png"),
   new LivroDaBiblia("at", "eclesiastes", "/versiculos/eclesiastes.jpg", "/dicas/eclesiastes.png", "/livros/ec.png"),
-  new LivroDaBiblia("at", "cantares", "/versiculos/cantares.jpg", "/dicas/cantares.png", "/livros/ct.png"),
-  new LivroDaBiblia("at", "sabedoria", "/versiculos/sabedoria.jpg", "/dicas/sabedoria.png", "/livros/sabedoria.png"),
+  // new LivroDaBiblia("at", "cantares", "/versiculos/cantares.jpg", "/dicas/cantares.png", "/livros/ct.png"),
+  // new LivroDaBiblia("at", "sabedoria", "/versiculos/sabedoria.jpg", "/dicas/sabedoria.png", "/livros/sabedoria.png"),
   new LivroDaBiblia("at", "eclesiastico", "/versiculos/eclesiastico.jpg", "/dicas/eclesiastico.png", "/livros/eclesiastico.png"),
-  new LivroDaBiblia("at", "isaias", "/versiculos/isaias.jpg", "/dicas/isaias.png", "/livros/is.png"),
-  new LivroDaBiblia("at", "jeremias", "/versiculos/jeremias.jpg", "/dicas/jeremias.png", "/livros/jr.png"),
+  // new LivroDaBiblia("at", "isaias", "/versiculos/isaias.jpg", "/dicas/isaias.png", "/livros/is.png"),
+  // new LivroDaBiblia("at", "jeremias", "/versiculos/jeremias.jpg", "/dicas/jeremias.png", "/livros/jr.png"),
   new LivroDaBiblia("at", "lamentacoes", "/versiculos/lamentacoes.jpg", "/dicas/lamentacoes.png", "/livros/lm.png"),
-  new LivroDaBiblia("at", "baruque", "/versiculos/baruque.jpg", "/dicas/baruque.png", "/livros/baruque.png"),
-  new LivroDaBiblia("at", "ezequiel", "/versiculos/ezequiel.jpg", "/dicas/ezequiel.png", "/livros/ez.png"),
-  new LivroDaBiblia("at", "daniel", "/versiculos/daniel.jpg", "/dicas/daniel.png", "/livros/dn.png"),
-  new LivroDaBiblia("at", "oseias", "/versiculos/oseias.jpg", "/dicas/oseias.png", "/livros/os.png"),
-  new LivroDaBiblia("at", "joel", "/versiculos/joel.jpg", "/dicas/joel.png", "/livros/jl.png"),
-  new LivroDaBiblia("at", "amos", "/versiculos/amos.jpg", "/dicas/amos.png", "/livros/am.png"),
-  new LivroDaBiblia("at", "obadias", "/versiculos/obadias.jpg", "/dicas/obadias.png", "/livros/ob.png"),
-  new LivroDaBiblia("at", "jonas", "/versiculos/jonas.jpg", "/dicas/jonas.png", "/livros/jn.png"),
-  new LivroDaBiblia("at", "miqueias", "/versiculos/miqueias.jpg", "/dicas/miqueias.png", "/livros/mq.png"),
-  new LivroDaBiblia("at", "naum", "/versiculos/naum.jpg", "/dicas/naum.png", "/livros/na.png"),
-  new LivroDaBiblia("at", "habacuque", "/versiculos/habacuque.jpg", "/dicas/habacuque.png", "/livros/hc.png"),
-  new LivroDaBiblia("at", "sofonias", "/versiculos/sofonias.jpg", "/dicas/sofonias.png", "/livros/sf.png"),
-  new LivroDaBiblia("at", "ageu", "/versiculos/ageu.jpg", "/dicas/ageu.png", "/livros/ag.png"),
-  new LivroDaBiblia("at", "zacarias", "/versiculos/zacarias.jpg", "/dicas/zacarias.png", "/livros/zc.png"),
-  new LivroDaBiblia("at", "malaquias", "/versiculos/malaquias.jpg", "/dicas/malaquias.png", "/livros/ml.png"),
-  new LivroDaBiblia("nt", "mateus", "/versiculos/mateus.jpg", "/dicas/mateus.png", "/livros/mt.png"),
-  new LivroDaBiblia("nt", "marcos", "/versiculos/marcos.jpg", "/dicas/marcos.png", "/livros/mc.png"),
-  new LivroDaBiblia("nt", "lucas", "/versiculos/lucas.jpg", "/dicas/lucas.png", "/livros/lc.png"),
-  new LivroDaBiblia("nt", "joao", "/versiculos/joao.jpg", "/dicas/joao.png", "/livros/joao.png"),
+  // new LivroDaBiblia("at", "baruque", "/versiculos/baruque.jpg", "/dicas/baruque.png", "/livros/baruque.png"),
+  // new LivroDaBiblia("at", "ezequiel", "/versiculos/ezequiel.jpg", "/dicas/ezequiel.png", "/livros/ez.png"),
+  // new LivroDaBiblia("at", "daniel", "/versiculos/daniel.jpg", "/dicas/daniel.png", "/livros/dn.png"),
+  // new LivroDaBiblia("at", "oseias", "/versiculos/oseias.jpg", "/dicas/oseias.png", "/livros/os.png"),
+  // new LivroDaBiblia("at", "joel", "/versiculos/joel.jpg", "/dicas/joel.png", "/livros/jl.png"),
+  // new LivroDaBiblia("at", "amos", "/versiculos/amos.jpg", "/dicas/amos.png", "/livros/am.png"),
+  // new LivroDaBiblia("at", "obadias", "/versiculos/obadias.jpg", "/dicas/obadias.png", "/livros/ob.png"),
+  // new LivroDaBiblia("at", "jonas", "/versiculos/jonas.jpg", "/dicas/jonas.png", "/livros/jn.png"),
+  // new LivroDaBiblia("at", "miqueias", "/versiculos/miqueias.jpg", "/dicas/miqueias.png", "/livros/mq.png"),
+  // new LivroDaBiblia("at", "naum", "/versiculos/naum.jpg", "/dicas/naum.png", "/livros/na.png"),
+  // new LivroDaBiblia("at", "habacuque", "/versiculos/habacuque.jpg", "/dicas/habacuque.png", "/livros/hc.png"),
+  // new LivroDaBiblia("at", "sofonias", "/versiculos/sofonias.jpg", "/dicas/sofonias.png", "/livros/sf.png"),
+  // new LivroDaBiblia("at", "ageu", "/versiculos/ageu.jpg", "/dicas/ageu.png", "/livros/ag.png"),
+  // new LivroDaBiblia("at", "zacarias", "/versiculos/zacarias.jpg", "/dicas/zacarias.png", "/livros/zc.png"),
+  // new LivroDaBiblia("at", "malaquias", "/versiculos/malaquias.jpg", "/dicas/malaquias.png", "/livros/ml.png"),
+  // new LivroDaBiblia("nt", "mateus", "/versiculos/mateus.jpg", "/dicas/mateus.png", "/livros/mt.png"),
+  // new LivroDaBiblia("nt", "marcos", "/versiculos/marcos.jpg", "/dicas/marcos.png", "/livros/mc.png"),
+  // new LivroDaBiblia("nt", "lucas", "/versiculos/lucas.jpg", "/dicas/lucas.png", "/livros/lc.png"),
+  // new LivroDaBiblia("nt", "joao", "/versiculos/joao.jpg", "/dicas/joao.png", "/livros/joao.png"),
   new LivroDaBiblia("nt", "atos", "/versiculos/atos.jpg", "/dicas/atos.png", "/livros/at.png"),
   new LivroDaBiblia("nt", "romanos", "/versiculos/romanos.jpg", "/dicas/romanos.png", "/livros/rm.png"),
   new LivroDaBiblia("nt", "1corintios", "/versiculos/1corintios.jpg", "/dicas/1corintios.png", "/livros/1co.png"),
@@ -79,6 +79,7 @@ const listaDeLivrosJaAcertados = []
 let ultimoNumeroSorteado = 999
 let dragged = null
 const gerenciadorDeErros = new GerenciadorDeErros()
+const gerenciadorDosLivros = new GerenciadorDosLivros()
 // X-X-X-X-X-X-X-X-X-X-X- PÁGINA 1-X-X-X-X-X-X-X-X-X-X-X
 function clicarVT() {
   document.getElementById("pagina1").style.display = "none"
@@ -109,7 +110,9 @@ function clicarStart() {
 // X-X-X-X-X-X-X-X-X-X-X- PÁGINA 2 -X-X-X-X-X-X-X-X-X-X-X
 const livro = document.getElementById("livro")
 livro.addEventListener("click", () => {
-  sorteiaLivroDaVez()
+  if(gerenciadorDosLivros.verificaSeEstaHabilitado()) {
+    sorteiaLivroDaVez()
+  }
 })
 
 document.getElementById("botao-despenser-dicas")
@@ -157,9 +160,9 @@ function verificaSeAcertou() {
     inputDeResposta.style.color = "rgb(1, 21, 86)"//cor: azul marinho
     inputDeResposta.style.fontFamily = "Swis721 BlkEx BT"
     if (resposta == "deuteronomio") {
-      inputDeResposta.style.fontSize = "18px"
+      inputDeResposta.style.fontSize = "16px"
     } else if (resposta.length > 11) {
-      inputDeResposta.style.fontSize = "15px"
+      inputDeResposta.style.fontSize = "16px"
     } else {
       inputDeResposta.style.fontSize = "22px"
     }

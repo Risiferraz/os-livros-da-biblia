@@ -5,6 +5,7 @@ class LivroDaBiblia {
         this.src = src
         this.dicaSRC = dicaSRC
         this.respostaSRC = respostaSRC
+        this.isHabilitado = true
     }
     mostraLivro() {
         const livroElementoHTML = document.getElementById("livro")
