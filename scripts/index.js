@@ -160,9 +160,13 @@ function verificaSeAcertou() {
     inputDeResposta.style.color = "rgb(1, 21, 86)"//cor: azul marinho
     inputDeResposta.style.fontFamily = "Swis721 BlkEx BT"
     if (resposta == "deuteronomio") {
-      inputDeResposta.style.fontSize = "16px"
-    } else if (resposta.length > 11) {
-      inputDeResposta.style.fontSize = "16px"
+      inputDeResposta.style.fontSize = "18px"
+    } else if (resposta == "1tessalonicenses") {
+      inputDeResposta.style.fontSize = "15px"
+    } else if (resposta == "2tessalonicenses") {
+      inputDeResposta.style.fontSize = "15px"
+    } else if (resposta.length > 10) {
+      inputDeResposta.style.fontSize = "20px"
     } else {
       inputDeResposta.style.fontSize = "22px"
     }
