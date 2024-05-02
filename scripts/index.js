@@ -20,9 +20,9 @@ const listaDeLivros = [
   // new LivroDaBiblia("at", "ester", "/versiculos/ester.jpg", "/dicas/ester.png", "/livros/et.png"),
   // new LivroDaBiblia("at", "jo", "/versiculos/jo.jpg", "/dicas/jo.png", "/livros/jo.png"),
   // new LivroDaBiblia("at", "salmos", "/versiculos/salmos.jpg", "/dicas/salmos.png", "/livros/sl.png"),
-  new LivroDaBiblia("at", "1macabeus", "/versiculos/1macabeus.jpg", "/dicas/1macabeus.png", "/livros/1macabeus.png"),
-  new LivroDaBiblia("at", "2macabeus", "/versiculos/2macabeus.jpg", "/dicas/2macabeus.png", "/livros/2macabeus.png"),
-  new LivroDaBiblia("at", "proverbios", "/versiculos/proverbios.jpg", "/dicas/proverbios.png", "/livros/pv.png"),
+  // new LivroDaBiblia("at", "1macabeus", "/versiculos/1macabeus.jpg", "/dicas/1macabeus.png", "/livros/1macabeus.png"),
+  // new LivroDaBiblia("at", "2macabeus", "/versiculos/2macabeus.jpg", "/dicas/2macabeus.png", "/livros/2macabeus.png"),
+  // new LivroDaBiblia("at", "proverbios", "/versiculos/proverbios.jpg", "/dicas/proverbios.png", "/livros/pv.png"),
   new LivroDaBiblia("at", "eclesiastes", "/versiculos/eclesiastes.jpg", "/dicas/eclesiastes.png", "/livros/ec.png"),
   // new LivroDaBiblia("at", "cantares", "/versiculos/cantares.jpg", "/dicas/cantares.png", "/livros/ct.png"),
   // new LivroDaBiblia("at", "sabedoria", "/versiculos/sabedoria.jpg", "/dicas/sabedoria.png", "/livros/sabedoria.png"),
@@ -49,15 +49,15 @@ const listaDeLivros = [
   // new LivroDaBiblia("nt", "marcos", "/versiculos/marcos.jpg", "/dicas/marcos.png", "/livros/mc.png"),
   // new LivroDaBiblia("nt", "lucas", "/versiculos/lucas.jpg", "/dicas/lucas.png", "/livros/lc.png"),
   // new LivroDaBiblia("nt", "joao", "/versiculos/joao.jpg", "/dicas/joao.png", "/livros/joao.png"),
-  new LivroDaBiblia("nt", "atos", "/versiculos/atos.jpg", "/dicas/atos.png", "/livros/at.png"),
-  new LivroDaBiblia("nt", "romanos", "/versiculos/romanos.jpg", "/dicas/romanos.png", "/livros/rm.png"),
-  new LivroDaBiblia("nt", "1corintios", "/versiculos/1corintios.jpg", "/dicas/1corintios.png", "/livros/1co.png"),
-  new LivroDaBiblia("nt", "2corintios", "/versiculos/2corintios.jpg", "/dicas/2corintios.png", "/livros/2co.png"),
-  new LivroDaBiblia("nt", "galatas", "/versiculos/galatas.jpg", "/dicas/galatas.png", "/livros/gl.png"),
-  new LivroDaBiblia("nt", "efesios", "/versiculos/efesios.jpg", "/dicas/efesios.png", "/livros/ef.png"),
-  new LivroDaBiblia("nt", "filipenses", "/versiculos/filipenses.jpg", "/dicas/filipenses.png", "/livros/fl.png"),
-  new LivroDaBiblia("nt", "colossenses", "/versiculos/colossenses.jpg", "/dicas/colossenses.png", "/livros/cl.png"),
-  new LivroDaBiblia("nt", "1tessalonicenses", "/versiculos/1tessalonicenses.jpg", "/dicas/1tessalonicenses.png", "/livros/1ts.png"),
+  // new LivroDaBiblia("nt", "atos", "/versiculos/atos.jpg", "/dicas/atos.png", "/livros/at.png"),
+  // new LivroDaBiblia("nt", "romanos", "/versiculos/romanos.jpg", "/dicas/romanos.png", "/livros/rm.png"),
+  // new LivroDaBiblia("nt", "1corintios", "/versiculos/1corintios.jpg", "/dicas/1corintios.png", "/livros/1co.png"),
+  // new LivroDaBiblia("nt", "2corintios", "/versiculos/2corintios.jpg", "/dicas/2corintios.png", "/livros/2co.png"),
+  // new LivroDaBiblia("nt", "galatas", "/versiculos/galatas.jpg", "/dicas/galatas.png", "/livros/gl.png"),
+  // new LivroDaBiblia("nt", "efesios", "/versiculos/efesios.jpg", "/dicas/efesios.png", "/livros/ef.png"),
+  // new LivroDaBiblia("nt", "filipenses", "/versiculos/filipenses.jpg", "/dicas/filipenses.png", "/livros/fl.png"),
+  // new LivroDaBiblia("nt", "colossenses", "/versiculos/colossenses.jpg", "/dicas/colossenses.png", "/livros/cl.png"),
+  // new LivroDaBiblia("nt", "1tessalonicenses", "/versiculos/1tessalonicenses.jpg", "/dicas/1tessalonicenses.png", "/livros/1ts.png"),
   new LivroDaBiblia("nt", "2tessalonicenses", "/versiculos/2tessalonicenses.jpg", "/dicas/2tessalonicenses.png", "/livros/2ts.png"),
   // new LivroDaBiblia("nt", "1timoteo", "/versiculos/1timoteo.jpg", "/dicas/1timoteo.png", "/livros/1tm.png"),
   // new LivroDaBiblia("nt", "2timoteo", "/versiculos/2timoteo.jpg", "/dicas/2timoteo.png", "/livros/2tm.png"),
@@ -392,5 +392,5 @@ function isFimDeJogo() {
 function realizaAcoesDeFimDeJogo() {
   cronometro.pararCronometro()
   pontuacao.adicionaPontuacaoDeAcordoComCronometro(cronometro)
-  alert('fim de jogo')
+  document.getElementById("mensagem-final").style.display = "grid"
 }

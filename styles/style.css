@@ -457,13 +457,15 @@ h2 {
     top: 0;
     left: 0;
     right: 0;
-    bottom: 130px;
+    bottom: 47px;
     margin: auto;
     width: 60%;
     height: 60%;
     z-index: 10;
     background-color: #e0c282;
     justify-items: center;
+    width: 600px;
+    height: 880px;
 }
 #img-mensagem-final{
     width: 100%;

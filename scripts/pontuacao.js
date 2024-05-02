@@ -83,5 +83,11 @@ class Pontuacao {
             this.pontosDoJogador *= 2
         }
         this.atualizaPontuacao()
+        const relogio = cronometro.pegaRelogio()
+        this.mostraPontuacaoFinal(relogio)
+    }
+    mostraPontuacaoFinal(relogio) {
+        document.getElementById("mostra-tempo-final").textContent = relogio
+        document.getElementById("mostra-pontuacao-final").textContent = this.pontosDoJogador
     }
 }

@@ -14,9 +14,7 @@ class Cronometro {
             if (this.minutos == 60 && this.segundos == 0) {
                 alert("TEMPO ESGOTADO")
             }
-            const segundosString = this.segundos <= 9 ? `0${this.segundos}` : `${this.segundos}`
-            const minutosString = this.minutos <= 9 ? `0${this.minutos}` : `${this.minutos}`
-            const cronometro = `${minutosString}:${segundosString}`
+            const cronometro = this.pegaRelogio()
             document.getElementById('cronometro').textContent = cronometro
         }
     }
@@ -34,5 +32,10 @@ class Cronometro {
     }
     isBom() {
         return this.minutos > 45
+    }
+    pegaRelogio() {
+        const segundosString = this.segundos <= 9 ? `0${this.segundos}` : `${this.segundos}`
+        const minutosString = this.minutos <= 9 ? `0${this.minutos}` : `${this.minutos}`
+        return `${minutosString}:${segundosString}`
     }
 }
