@@ -5,9 +5,11 @@ class LivroDaBiblia {
         this.src = src
         this.dicaSRC = dicaSRC
         this.respostaSRC = respostaSRC
+        this.isHabilitado = true
     }
     mostraLivro() {
         const livroElementoHTML = document.getElementById("livro")
+        console.log("Resposta: "+this.id)
         document.getElementById("nome-livro").textContent = this.id
         livroElementoHTML.src = this.src
         document.getElementById("dica").style.display = "none"
@@ -30,6 +32,8 @@ class LivroDaBiblia {
         return this.testamento == "nt"
     }
     isDoTestamento(testamento) {
+        if (testamento == "img-cx-nt") testamento="nt"
+        if (testamento == "img-cx-at") testamento="at"
         return this.testamento == testamento
     }
     fechaABiblia() {

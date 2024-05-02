@@ -26,13 +26,13 @@ class Cronometro {
     iniciaCronometro() {
         this.isCronometroAtivo = true
     }
-    isMenorQuinze() {
-        return this.segundos <= 15
+    isOtimo() {
+        return this.minutos <= 35
     }
-    isDeQuinzeAVinte() {
-        return this.segundos <=20
+    isMuitoBom() {
+        return this.minutos <= 45
     }
-    isDeVinteATrinta() {
-        return this.segundos <=25
+    isBom() {
+        return this.minutos > 45
     }
 }

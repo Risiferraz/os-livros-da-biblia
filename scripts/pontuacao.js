@@ -75,4 +75,13 @@ class Pontuacao {
     pegaPontoParaAcertoSemErroTestamento() {
         return 5
     }
+    adicionaPontuacaoDeAcordoComCronometro(cronometro) {
+        if(cronometro.isOtimo()) {
+            this.pontosDoJogador *= 3
+        }
+        else if(cronometro.isMuitoBom()) {
+            this.pontosDoJogador *= 2
+        }
+        this.atualizaPontuacao()
+    }
 }
