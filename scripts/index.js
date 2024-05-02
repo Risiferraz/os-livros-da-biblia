@@ -112,6 +112,7 @@ const livro = document.getElementById("livro")
 livro.addEventListener("click", () => {
   if(gerenciadorDosLivros.verificaSeEstaHabilitado()) {
     sorteiaLivroDaVez()
+    gerenciadorDosLivros.bloqueiaLivroSorteado()
   }
 })
 
@@ -183,7 +184,7 @@ function verificaSeAcertou() {
     setTimeout(() => acoesParaRespostaErrada(), TEMPO_PARA_APARECER_ERRADO)
   }
 }
-function acoesParaRespostaErrada() {
+function acoesParaRespostaErrada() { //para o modal "mensagem nova dica letra" e "mensagem nova dica número"
   inputDeResposta.style.color = "#000000"//cor:preto
   inputDeResposta.style.fontSize = "18px"
   const primeiraLetra = livroCorreto.pegaPrimeiraLetra()
@@ -193,6 +194,7 @@ function acoesParaRespostaErrada() {
     console.log("passando a vez")
     gerenciadorDeErros.zerarQuantidadeDeErros()
     livroCorreto.fechaABiblia()
+    gerenciadorDosLivros.habilitaLivroSorteado()
   }
   else {
     console.log("errou")
@@ -376,6 +378,7 @@ function realizaAcoesDeAcerto() {
   document.getElementById("modal-acerto").checked = true
   setTimeout(() => {
     document.getElementById("modal-acerto").checked = false
+    gerenciadorDosLivros.habilitaLivroSorteado()
   }, 1200)
 }
 function verificaFimDeJogo() {
