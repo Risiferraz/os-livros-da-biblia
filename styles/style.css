@@ -165,7 +165,7 @@ a:hover {
 /*      PÁGINA 2        */
 #pagina2 {
     width: 600px;
-    height: auto;
+    height: 900px;
     background-color: #e0c282;
     margin: 2% auto;
     display: none;
@@ -450,53 +450,52 @@ h2 {
     font-family: 'Swis721 BlkEx BT','Charlesworth', 'Arial Narrow', Arial, sans-serif;
 }
 #mensagem-final {
-    display: none;
-    /* display: grid; */
-    grid-template-columns: 45% 10% 45%;
+    /* display: none; */
     position: fixed;
-    top: 0;
+    top: 19px;
     left: 0;
     right: 0;
-    bottom: 47px;
     margin: auto;
-    width: 60%;
-    height: 60%;
     z-index: 10;
     background-color: #e0c282;
-    justify-items: center;
     width: 600px;
-    height: 880px;
+    height: 900px;
 }
 #img-mensagem-final{
     width: 100%;
-    grid-area: 1/ 1 / span 1 / span 3;
+    position: absolute;
+    bottom: 0;
 }
 #pontuacao-final {
-    grid-area: 2/ 1 / span 1 / span 1;
     background: rgb(182, 114, 13);
-    width:60%;
-    height: 60px;
+    padding: 1%;
+    width: 160px;
+    height: 70px;
     position: relative;
     font-size: 30px;
     font-family: Impact, 'Arial Narrow Bold', sans-serif;
     border-radius: 8px;
     border: outset 5px rgb(252, 237, 177);
+    left: 15%;
+    top: 20%;
 }
 #tempo-final {
-    grid-area: 2/ 3 / span 1 / span 1;
     background: rgb(182, 114, 13);
-    width: 60%;
-    height: 60px;
+    padding: 1%;
+    width: 160px;
+    height: 70px;
+    position: relative;
     font-size: 30px;
     font-family: Impact, 'Arial Narrow Bold', sans-serif;
     border-radius: 8px;
     border: outset 5px rgb(252, 237, 177);
+    left: 58%;
+    top: 12%;
 }
 #proxima-fase {
-    grid-area: 3/ 1 / span 1 / span 1;
     background: rgb(182, 114, 13);
-    width:80%;
-    height: 60px;
+    width: 210px;
+    height: 70px;
     font-family: Impact, 'Arial Narrow Bold', sans-serif;
     font-size: 30px;
     color: #000;
@@ -506,14 +505,19 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    top: 30%;
+    left: 10%;
 }
 #sair {
-    grid-area: 3/ 3 / span 1 / span 1;
     background: rgb(182, 114, 13);
-    width: 80%;
-    height: 60px;
+    width: 210px;
+    height: 70px;
     font-size: 30px;
     font-family: Impact, 'Arial Narrow Bold', sans-serif;
     border-radius: 8px;
     border: outset 5px rgb(252, 237, 177);
+    position: absolute;
+    top: 30%;
+    left: 54%;
 }
