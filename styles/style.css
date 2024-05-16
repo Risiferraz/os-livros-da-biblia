@@ -450,7 +450,7 @@ h2 {
     font-family: 'Swis721 BlkEx BT','Charlesworth', 'Arial Narrow', Arial, sans-serif;
 }
 #mensagem-final {
-    /* display: none; */
+    display: none;
     position: fixed;
     top: 19px;
     left: 0;

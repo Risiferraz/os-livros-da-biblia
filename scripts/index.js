@@ -181,6 +181,18 @@ function verificaSeAcertou() {
   }
   else {
     inputDeResposta.style.color = "#ff0000"//cor: vermelho
+    //TODO adeguar o tamanho da fonte
+    if (resposta == "deuteronomio") {
+      inputDeResposta.style.fontSize = "18px"
+    } else if (resposta == "1tessalonicenses") {
+      inputDeResposta.style.fontSize = "15px"
+    } else if (resposta == "2tessalonicenses") {
+      inputDeResposta.style.fontSize = "15px"
+    } else if (resposta.length > 10) {
+      inputDeResposta.style.fontSize = "20px"
+    } else {
+      inputDeResposta.style.fontSize = "22px"
+    }
     setTimeout(() => acoesParaRespostaErrada(), TEMPO_PARA_APARECER_ERRADO)
   }
 }
