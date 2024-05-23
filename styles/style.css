@@ -477,20 +477,20 @@ h2 {
     border-radius: 8px;
     border: outset 5px rgb(252, 237, 177);
     left: 15%;
-    top: 20%;
+    top: 30%;
 }
 #tempo-final {
     background: rgb(182, 114, 13);
     padding: 1%;
     width: 160px;
     height: 70px;
-    position: relative;
+    position: absolute;
     font-size: 30px;
     font-family: Impact, 'Arial Narrow Bold', sans-serif;
     border-radius: 8px;
     border: outset 5px rgb(252, 237, 177);
     left: 58%;
-    top: 12%;
+    top: 30%;
 }
 #proxima-fase {
     background: rgb(182, 114, 13);
@@ -506,8 +506,8 @@ h2 {
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 30%;
     left: 10%;
+    top: 20%;
 }
 #sair {
     background: rgb(182, 114, 13);
@@ -518,8 +518,8 @@ h2 {
     border-radius: 8px;
     border: outset 5px rgb(252, 237, 177);
     position: absolute;
-    top: 30%;
     left: 54%;
+    top: 20%;
 }
 #sair-salvar {
     background: rgb(182, 114, 13);
