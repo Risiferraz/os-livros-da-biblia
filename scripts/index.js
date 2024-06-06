@@ -55,10 +55,10 @@ const listaDeLivros = [
   // new LivroDaBiblia("nt", "2corintios", "/versiculos/2corintios.jpg", "/dicas/2corintios.png", "/livros/2co.png"),
   // new LivroDaBiblia("nt", "galatas", "/versiculos/galatas.jpg", "/dicas/galatas.png", "/livros/gl.png"),
   // new LivroDaBiblia("nt", "efesios", "/versiculos/efesios.jpg", "/dicas/efesios.png", "/livros/ef.png"),
-  new LivroDaBiblia("nt", "filipenses", "/versiculos/filipenses.jpg", "/dicas/filipenses.png", "/livros/fl.png"),
-  new LivroDaBiblia("nt", "colossenses", "/versiculos/colossenses.jpg", "/dicas/colossenses.png", "/livros/cl.png"),
-  new LivroDaBiblia("nt", "1tessalonicenses", "/versiculos/1tessalonicenses.jpg", "/dicas/1tessalonicenses.png", "/livros/1ts.png"),
-  new LivroDaBiblia("nt", "2tessalonicenses", "/versiculos/2tessalonicenses.jpg", "/dicas/2tessalonicenses.png", "/livros/2ts.png"),
+  // new LivroDaBiblia("nt", "filipenses", "/versiculos/filipenses.jpg", "/dicas/filipenses.png", "/livros/fl.png"),
+  // new LivroDaBiblia("nt", "colossenses", "/versiculos/colossenses.jpg", "/dicas/colossenses.png", "/livros/cl.png"),
+  // new LivroDaBiblia("nt", "1tessalonicenses", "/versiculos/1tessalonicenses.jpg", "/dicas/1tessalonicenses.png", "/livros/1ts.png"),
+  // new LivroDaBiblia("nt", "2tessalonicenses", "/versiculos/2tessalonicenses.jpg", "/dicas/2tessalonicenses.png", "/livros/2ts.png"),
   // new LivroDaBiblia("nt", "1timoteo", "/versiculos/1timoteo.jpg", "/dicas/1timoteo.png", "/livros/1tm.png"),
   // new LivroDaBiblia("nt", "2timoteo", "/versiculos/2timoteo.jpg", "/dicas/2timoteo.png", "/livros/2tm.png"),
   // new LivroDaBiblia("nt", "tito", "/versiculos/tito.jpg", "/dicas/tito.png", "/livros/tt.png"),
@@ -404,5 +404,7 @@ function isFimDeJogo() {
 function realizaAcoesDeFimDeJogo() {
   cronometro.pararCronometro()
   pontuacao.adicionaPontuacaoDeAcordoComCronometro(cronometro)
-  document.getElementById("mensagem-final").style.display = "grid"
+  setTimeout(()=>{
+    document.getElementById("mensagem-final").style.display = "grid"
+  },1800)
 }
