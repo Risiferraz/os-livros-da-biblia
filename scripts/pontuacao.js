@@ -7,6 +7,12 @@ class Pontuacao {
         this.errou = false
         this.errouTestamento = false
     }
+    pegaPontuacao() {
+        return this.pontosDoJogador
+    }
+    setPontuacaoDoJogador(pontosDoJogador) {
+        this.pontosDoJogador = pontosDoJogador
+    }
     atualizaPontuacao() {
         this.elementoHtml.textContent = this.pontosDoJogador
         this.animacaoDeMudancaDePontuacao()
