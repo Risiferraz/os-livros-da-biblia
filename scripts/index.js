@@ -56,7 +56,7 @@ const listaDeLivros = [
   // new LivroDaBiblia("nt", "galatas", "/versiculos/galatas.jpg", "/dicas/galatas.png", "/livros/gl.png"),
   // new LivroDaBiblia("nt", "efesios", "/versiculos/efesios.jpg", "/dicas/efesios.png", "/livros/ef.png"),
   // new LivroDaBiblia("nt", "filipenses", "/versiculos/filipenses.jpg", "/dicas/filipenses.png", "/livros/fl.png"),
-  new LivroDaBiblia("nt", "colossenses", "/versiculos/colossenses.jpg", "/dicas/colossenses.png", "/livros/cl.png"),
+  // new LivroDaBiblia("nt", "colossenses", "/versiculos/colossenses.jpg", "/dicas/colossenses.png", "/livros/cl.png"),
   new LivroDaBiblia("nt", "1tessalonicenses", "/versiculos/1tessalonicenses.jpg", "/dicas/1tessalonicenses.png", "/livros/1ts.png"),
   new LivroDaBiblia("nt", "2tessalonicenses", "/versiculos/2tessalonicenses.jpg", "/dicas/2tessalonicenses.png", "/livros/2ts.png"),
   // new LivroDaBiblia("nt", "1timoteo", "/versiculos/1timoteo.jpg", "/dicas/1timoteo.png", "/livros/1tm.png"),
@@ -184,13 +184,13 @@ function verificaSeAcertou() {
     //TODO adeguar o tamanho da fonte
     const respostaErrada = inputDeResposta.value
     if (respostaErrada == "deuteronomio") {
-      inputDeResposta.style.fontSize = "36px"
+      inputDeResposta.style.fontSize = "25px"
     } else if (respostaErrada == "1tessalonicenses") {
-      inputDeResposta.style.fontSize = "40px"
+      inputDeResposta.style.fontSize = "22px"
     } else if (respostaErrada == "2tessalonicenses") {
-      inputDeResposta.style.fontSize = "30px"
+      inputDeResposta.style.fontSize = "22px"
     } else if (respostaErrada.length > 10) {
-      inputDeResposta.style.fontSize = "40px"
+      inputDeResposta.style.fontSize = "25px"
     } else {
       inputDeResposta.style.fontSize = "22px"
     }
