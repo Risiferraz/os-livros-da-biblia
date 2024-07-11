@@ -6,12 +6,14 @@ class BotaoSair {
     salvaESai() {
         alert("SALVANDO E SAINDO")
         const dadosSalvos = document.getElementById("dados-para-salvar").textContent
-        window.localStorage.setItem("dadosSalvos", dadosSalvos)
+        const dadosSalvosJson = JSON.stringify(dadosSalvos)
+        window.localStorage.setItem("dadosSalvos", dadosSalvosJson)
     }
     pegaDadosSalvos() {
-        const pontuacao=(!!window.localStorage.getItem("dadosSalvos"))?window.localStorage.getItem("dadosSalvos"):0
+        const dadosSalvosJson=(!!window.localStorage.getItem("dadosSalvos"))?window.localStorage.getItem("dadosSalvos"):0
+        const dadosSalvos = JSON.parse(dadosSalvosJson)
         return{
-            pontuacao
+            pontuacao:dadosSalvos.pontuacao
         }
     }
     escondeBotao() {
