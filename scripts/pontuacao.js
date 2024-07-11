@@ -13,9 +13,14 @@ class Pontuacao {
     setPontuacaoDoJogador(pontosDoJogador) {
         this.pontosDoJogador = pontosDoJogador
     }
+    setPontuacaoDoJogadorSalva(pontosDoJogador) {
+        this.setPontuacaoDoJogador(pontosDoJogador)
+        this.atualizaPontuacao()
+    }
     atualizaPontuacao() {
         this.elementoHtml.textContent = this.pontosDoJogador
         this.animacaoDeMudancaDePontuacao()
+        document.getElementById("dados-para-salvar").textContent = this.pontosDoJogador
     }
     animacaoDeMudancaDePontuacao() {
         this.elementoHtml.style.color="white"

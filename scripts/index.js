@@ -80,6 +80,9 @@ let ultimoNumeroSorteado = 999
 let dragged = null
 const gerenciadorDeErros = new GerenciadorDeErros()
 const gerenciadorDosLivros = new GerenciadorDosLivros()
+const botaoSair = new BotaoSair()
+const dadosSalvos = botaoSair.pegaDadosSalvos()
+pontuacao.setPontuacaoDoJogadorSalva(dadosSalvos.pontuacao)
 // X-X-X-X-X-X-X-X-X-X-X- PÁGINA 1-X-X-X-X-X-X-X-X-X-X-X
 function clicarVT() {
   document.getElementById("pagina1").style.display = "none"

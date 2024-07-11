@@ -3,9 +3,16 @@ class BotaoSair {
         this.html = document.getElementById("sair-salvar")
         this.html.addEventListener("click",() => this.salvaESai())
     }
-    salvaESai(pontuacaoDoJogador) {
+    salvaESai() {
         alert("SALVANDO E SAINDO")
-        window.localStorage.setItem("pontuacaoDoJogador",pontuacaoDoJogador)
+        const dadosSalvos = document.getElementById("dados-para-salvar").textContent
+        window.localStorage.setItem("dadosSalvos", dadosSalvos)
+    }
+    pegaDadosSalvos() {
+        const pontuacao=(!!window.localStorage.getItem("dadosSalvos"))?window.localStorage.getItem("dadosSalvos"):0
+        return{
+            pontuacao
+        }
     }
     escondeBotao() {
         this.html.style.display="none"
