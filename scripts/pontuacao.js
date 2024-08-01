@@ -20,7 +20,7 @@ class Pontuacao {
     atualizaPontuacao() {
         this.elementoHtml.textContent = this.pontosDoJogador
         this.animacaoDeMudancaDePontuacao()
-        document.getElementById("dados-para-salvar").textContent = this.pontosDoJogador
+        document.getElementById("pontuacao-para-salvar").textContent = this.pontosDoJogador
     }
     animacaoDeMudancaDePontuacao() {
         this.elementoHtml.style.color="white"
