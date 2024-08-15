@@ -16,9 +16,7 @@ class BotaoSair {
             console.log("sem dados salvos")
             return this.pegaDadosZerados()
         }
-        return{
-            pontuacao:dadosSalvos.pontuacao
-        }
+        return dadosSalvos
     }
     escondeBotao() {
         this.html.style.display="none"
@@ -28,7 +26,8 @@ class BotaoSair {
     }
     pegaDadosZerados() {
         return{
-            pontuacao:0
+            pontuacao:0,
+            tempoGasto: "00:00"
         }
     }
 }

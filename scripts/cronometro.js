@@ -38,4 +38,8 @@ class Cronometro {
         const minutosString = this.minutos <= 9 ? `0${this.minutos}` : `${this.minutos}`
         return `${minutosString}:${segundosString}`
     }
+    setTempo(tempo) {
+        this.minutos= +tempo.split(":")[0]
+        this.segundos= +tempo.split(":")[1]
+    }
 }

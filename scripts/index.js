@@ -73,6 +73,7 @@ const listaDeLivros = [
   // new LivroDaBiblia("nt", "judas", "/versiculos/judas.jpg", "/dicas/judas.png", "/livros/jd.png"),
   // new LivroDaBiblia("nt", "apocalipse", "/versiculos/apocalipse.jpg", "/dicas/apocalipse.png", "/livros/ap.png"),
 ]
+const cronometro = new Cronometro()
 const pontuacao = new Pontuacao("indicador")
 const listaDeNumerosAleatoriosJaSorteados = []
 const listaDeLivrosJaAcertados = []
@@ -83,6 +84,7 @@ const gerenciadorDosLivros = new GerenciadorDosLivros()
 const botaoSair = new BotaoSair()
 const dadosSalvos = botaoSair.pegaDadosSalvos()
 pontuacao.setPontuacaoDoJogadorSalva(dadosSalvos.pontuacao)
+cronometro.setTempo(dadosSalvos.tempoGasto)
 // X-X-X-X-X-X-X-X-X-X-X- PÁGINA 1-X-X-X-X-X-X-X-X-X-X-X
 function clicarVT() {
   document.getElementById("pagina1").style.display = "none"
@@ -125,7 +127,6 @@ document.getElementById("botao-despenser-dicas")
     pontuacao.usandoDica()
   })
 let livroCorreto = null
-const cronometro = new Cronometro()
 setInterval(() => {
   cronometro.atualizaCronometro()
 }, 1000);
