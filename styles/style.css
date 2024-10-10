@@ -533,3 +533,6 @@ h2 {
     left: 54%;
     top: 20%;
 }
+#dados-salvos-json {
+    display: none;
+}

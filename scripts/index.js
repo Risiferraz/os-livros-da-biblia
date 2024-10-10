@@ -73,6 +73,11 @@ const listaDeLivros = [
   // new LivroDaBiblia("nt", "judas", "/versiculos/judas.jpg", "/dicas/judas.png", "/livros/jd.png"),
   // new LivroDaBiblia("nt", "apocalipse", "/versiculos/apocalipse.jpg", "/dicas/apocalipse.png", "/livros/ap.png"),
 ]
+const jogoFinalizado = new JogoFinalizado()
+const dadosDoJogoFinalizado = jogoFinalizado.pegaDadosDoJogoFinalizado()
+if(!!dadosDoJogoFinalizado) {
+  
+}
 const cronometro = new Cronometro()
 const pontuacao = new Pontuacao("indicador")
 let listaDeNumerosAleatoriosJaSorteados = []
