@@ -75,7 +75,7 @@ const listaDeLivros = [
 ]
 const cronometro = new Cronometro()
 const pontuacao = new Pontuacao("indicador")
-const listaDeNumerosAleatoriosJaSorteados = []
+let listaDeNumerosAleatoriosJaSorteados = []
 const listaDeLivrosJaAcertados = []
 let ultimoNumeroSorteado = 999
 let dragged = null
@@ -85,6 +85,16 @@ const botaoSair = new BotaoSair()
 const dadosSalvos = botaoSair.pegaDadosSalvos()
 pontuacao.setPontuacaoDoJogadorSalva(dadosSalvos.pontuacao)
 cronometro.setTempo(dadosSalvos.tempoGasto)
+if(!!dadosSalvos.numerosAleatoriosJaSorteados) {
+  if(typeof dadosSalvos.numerosAleatoriosJaSorteados === "string") {
+    if(dadosSalvos.numerosAleatoriosJaSorteados.includes(",")) {
+      listaDeNumerosAleatoriosJaSorteados=dadosSalvos.numerosAleatoriosJaSorteados.split(",")
+    }
+    else {
+      listaDeNumerosAleatoriosJaSorteados.push(dadosSalvos.numerosAleatoriosJaSorteados)
+    }
+  }
+}
 // X-X-X-X-X-X-X-X-X-X-X- PÁGINA 1-X-X-X-X-X-X-X-X-X-X-X
 function clicarVT() {
   document.getElementById("pagina1").style.display = "none"
@@ -162,6 +172,7 @@ function verificaSeAcertou() {
   const resposta = inputDeResposta.value
   if (livroCorreto.isRespostaCerta(resposta)) {
     listaDeNumerosAleatoriosJaSorteados.push(ultimoNumeroSorteado);
+    document.getElementById("numeros-de-livros-salvos").textContent=listaDeNumerosAleatoriosJaSorteados.join(",")
     inputDeResposta.style.color = "rgb(1, 21, 86)"//cor: azul marinho
     inputDeResposta.style.fontFamily = "Swis721 BlkEx BT"
     if (resposta == "deuteronomio") {

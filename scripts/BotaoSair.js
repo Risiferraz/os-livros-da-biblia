@@ -27,7 +27,8 @@ class BotaoSair {
     pegaDadosZerados() {
         return{
             pontuacao:0,
-            tempoGasto: "00:00"
+            tempoGasto: "00:00",
+            numerosAleatoriosJaSorteados: []
         }
     }
 }
